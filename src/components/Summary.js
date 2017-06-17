@@ -6,7 +6,8 @@ const Summary = props => {
 
 	return (
 	        <div className="col-md-4">
-		          <h2>{content.title}</h2>
+	        	<div className="bshadowedlite layerwhite">
+		          <h2 className="underline">{content.title}</h2>
 		          <span>
 		          	<img className="thumb25" src={content.src1} />
 		          	<img className="thumb25" src={content.src2} />
@@ -18,6 +19,7 @@ const Summary = props => {
 		          {more &&
 		          	<p>additional explanation here (conditional visibility, by button above) {content.more}</p>
 		          }
+		          </div>
 		        </div>
 	        )
 }

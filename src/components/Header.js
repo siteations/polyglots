@@ -1,59 +1,51 @@
 import React, { Component } from 'react';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
+import scrollToElement from 'scroll-to-element';
 
 import {items} from '../copy/content.js';
 
 const styles = {
   customWidth: {
     width: '100%',
-
   },
 };
-
-// const items = {
-// 	home: [
-// 		{ value: 1, text: 'Polyglot Productions' },//href, label
-// 	],
-// 	intro: [
-// 		{ value: 1, text: 'An Introduction to Polyglot Bibles' },
-// 		{ value: 2, text: '“The Age of Polyglots” (1502-1657)' },//href, label
-// 		{ value: 3, text: 'Introducing: Complutensian (1517)' },//href, label,
-// 		{ value: 4, text: 'Introducing: Antwerp (1571)' },//href, label,
-// 		{ value: 5, text: 'Introducing: London (1657)' },//href, label,
-// 	],
-// 	interact: [
-// 		{ value: 1, text: 'Interact with Polyglot Bibles' },
-// 		{ value: 2, text: 'Complutensian (1517) Samples' },//href, label,
-// 		{ value: 3, text: 'Antwerp (1571) Samples' },//href, label,
-// 		{ value: 4, text: 'London (1657) Samples' },//href, label,
-// 	],
-// 	biblio: [
-// 		{ value: 1, text: 'Bibliography of Polyglot Materials' },//href, label
-// 	],
-// };
 
 class Header extends Component {
 	constructor(props) {
     super(props);
     this.state = {
-    	home: 1,
-    	intro: 1,
-    	interact: 1,
-    	biblio: 1,
+    	home: '#introExhib',
+    	intro: '#introPoly',
+    	interact: '#interOptions',
+    	biblio: '#biblio',
     };
   }
 
-  handleChangeHome = (event, index, value) => this.setState({home:value});
-  handleChangeIntro = (event, index, value) => this.setState({intro:value});
-  handleChangeInteract = (event, index, value) => this.setState({interact:value});
-  handleChangeBiblio = (event, index, value) => this.setState({biblio: value});
+  handleChangeHome = (event, index, value) => this.setState({home:value}, this.props.info.history.push(value));
+  handleChangeIntro = (event, index, value) => this.setState({intro:value}, this.props.info.history.push(value));
+  handleChangeInteract = (event, index, value) => this.setState({interact:value}, this.props.info.history.push(value));
+  handleChangeBiblio = (event, index, value) => this.setState({biblio: value}, this.props.info.history.push(value));
+
+  componentDidMount() {
+    this.jumpToHash();
+  }
+  componentDidUpdate() {
+    this.jumpToHash();
+  }
+
+  jumpToHash = () => {
+    const hash = this.props.info.location.hash;
+    if (hash) {
+      scrollToElement(hash, { offset: -120 });
+    }
+  }
 
   render() {
-    console.log(this.props.location);
+    console.log('history?', this.props.info);
 
 	return (
-	     <div className="navbar navbar-fixed-top bshadowed">
+	     <div className="navbar navbar-fixed-top bshadowed layer1">
 	      <div className="col-xs-10 col-xs-offset-1" style={{marginTop: '20px'}}>
 
 		        <div className="col-md-3">
@@ -62,9 +54,10 @@ class Header extends Component {
 				          onChange={this.handleChangeHome}
 				          style={styles.customWidth}
 				          autoWidth={false}
+				          className={'appareo'}
 				        >
 				        {items.home &&
-				        	items.home.map(home=> <MenuItem value={home.value} primaryText={home.text} />)
+				        	items.home.map(home=> <MenuItem value={home.value} primaryText={home.text} className={'texta'} />)
 				        }
 			        </DropDownMenu>
 		        </div>
@@ -75,9 +68,10 @@ class Header extends Component {
 				          onChange={this.handleChangeIntro}
 				          style={styles.customWidth}
 				          autoWidth={false}
+				          className={'appareo'}
 				        >
 				        {items.intro &&
-				        	items.intro.map(intro=> <MenuItem value={intro.value} primaryText={intro.text} />)
+				        	items.intro.map(intro=> <MenuItem value={intro.value} primaryText={intro.text} className={'texta'} />)
 				        }
 			        </DropDownMenu>
 		        </div>
@@ -88,9 +82,10 @@ class Header extends Component {
 				          onChange={this.handleChangeInteract}
 				          style={styles.customWidth}
 				          autoWidth={false}
+				          className={'appareo'}
 				        >
 				        {items.interact &&
-				        	items.interact.map(intro=> <MenuItem value={intro.value} primaryText={intro.text} />)
+				        	items.interact.map(intro=> <MenuItem value={intro.value} primaryText={intro.text} className={'texta'} />)
 				        }
 			        </DropDownMenu>
 		        </div>
@@ -101,9 +96,10 @@ class Header extends Component {
 				          onChange={this.handleChangeBiblio}
 				          style={styles.customWidth}
 				          autoWidth={false}
+				          className={'appareo'}
 				        >
 				        {items.biblio &&
-				        	items.biblio.map(intro=> <MenuItem value={intro.value} primaryText={intro.text} />)
+				        	items.biblio.map(intro=> <MenuItem value={intro.value} primaryText={intro.text} className={'texta'} />)
 				        }
 			        </DropDownMenu>
 		        </div>

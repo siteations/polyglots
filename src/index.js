@@ -12,9 +12,6 @@ render(
      <Router>
        <div>
   			<Route exact path="/Polyglot" component={App} />
-  			<Route exact path="/Polyglot/Complutensian" component={App} />
-  			<Route exact path="/Polyglot/Antwerp" component={App} />
-  			<Route exact path="/Polyglot/London" component={App} />
 	     </div>
      </Router>,
     document.getElementById('root'),

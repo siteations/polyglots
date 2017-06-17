@@ -19,7 +19,7 @@ class Nav extends Component {
     console.log(this.props.location);
 
 	return (
-	     <div className="navbarG navbar-fixed-top bshadowed">
+	     <div className="navbarG navbar-fixed-top bshadowed layerwhite">
 	      <div className="col-xs-10 col-xs-offset-1" style={{marginTop: '20px'}}>
 	      	general logo and religious change graphic here
 	      </div>

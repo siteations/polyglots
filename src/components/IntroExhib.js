@@ -1,18 +1,28 @@
 import React, { Component } from 'react';
 import Summary from'./Summary';
+import scrollToElement from 'scroll-to-element';
 
 import {summaries, introParagraph} from '../copy/content.js';
 
 class IntroExhib extends Component {
 
+	jumpToHash = () => {
+    const hash = '#introPoly';
+    this.props.info.history.push(hash);
+
+    if (hash) {
+      scrollToElement(hash, { offset: -120 });
+    }
+  }
+
   render() {
 
 	return (
 			<div className="col-xs-10 col-xs-offset-1 pre-jumbotron" id="introExhib">
-				<div className="page bshadowed" >
+				<div className="page bshadowed layer1" >
 					<div className="jumbotron">
 			      <div className="text-center">
-			        <h1 className="white">Polyglot Productions</h1>
+			        <h1 className="white pjheader">Polyglot Productions</h1>
 			        <h3 className="white">Polyglot Bibles Subtitle here</h3><br/>
 			        <p className="white">Simple One-Line introduction to the Project/History</p>
 			      </div>
@@ -28,8 +38,8 @@ class IntroExhib extends Component {
 			    	<Summary content={summaries.translations} more={false}/>
 			    	<Summary content={summaries.tools} more={false}/>
 			     </div>
-					  <div className="row center-block text-center">
-					  	<span className="glyphicon glyphicon-chevron-down"></span>
+					  <div className="row center-block text-center m20">
+					  	<span className="glyphicon glyphicon-chevron-down down" onTouchTap={this.jumpToHash}></span>
 					  </div>
 			  </div>
 		  </div>

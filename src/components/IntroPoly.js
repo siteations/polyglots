@@ -1,50 +1,51 @@
 import React, { Component } from 'react';
-import Summary from'./Summary';
+import {IntroImg, IntroText} from'./IntroRows';
+import Introduction from './Introduction.js';
+import scrollToElement from 'scroll-to-element';
 
-import {summaries, introParagraph} from '../copy/content.js';
+import {summaries, introParagraph, lorem1, lorem2, lorem3, textIntros} from '../copy/content.js';
 
 class IntroPoly extends Component {
 
+		jumpToHash = () => {
+    const hash = '#interOptions';
+    this.props.info.history.push(hash);
+
+    if (hash) {
+      scrollToElement(hash, { offset: -120 });
+    }
+  }
+
   render() {
-    console.log(this.props.location);
 
 	return (
-	      <div className="col-xs-10 col-xs-offset-1">
-				<div className="page bshadowed m20" id="introPoly">
+	      <div className="col-xs-10 col-xs-offset-1" id="introPoly">
+				<div className="page bshadowed m20 layer1">
 					<div className="">
 			      <div className="text-center">
-			        <h1>'The Age of Polyglots'</h1>
-			        <h2>1502-1657</h2>
-			        <h5>Conditions and Collaborations spurring Polyglot Bible Creation and Dissemination</h5><br/>
+			        <h1 className="pjheader">"The Age of Polyglots"</h1>
+			        <h2 className="underline">1502-1657</h2>
+			        <h3>Conditions and Collaborations spurring Polyglot Bible Creation and Dissemination</h3><br/>
 			        <img src="" />
 			      </div>
 			    </div>
-			    <div className="row">
-			        <div className="col-md-6">
-			        	<h2>economic, scholarly, and religious conditions</h2>
-			        	<img src="./London-header.jpg" style={{width:'60%', margin: '2%' , borderRadius: '5px'}} />
-			        	<p>caption: </p>
-			        	<div className="col-md-10 col-md-offset-1">
-			          <h4><em>•	Describe the economic, scholarly, and religious conditions that created the “age of polyglots” (1502-1657).</em> {introParagraph}</h4>
-			          </div>
-			        </div>
-			        <div className="col-md-6">
-			        	<h2>technical, interdisciplinary collaborations</h2>
-			        	<img src="./London-header.jpg" style={{width:'60%', margin: '2%' , borderRadius: '5px'}} />
-			        	<p>caption: </p>
-			        	<div className="col-md-10 col-md-offset-1">
-			          <h4><em>•	Describe the economic, scholarly, and religious conditions that created the “age of polyglots” (1502-1657).</em> {introParagraph}</h4>
-			          </div>
-			        </div>
+			    <div className="row m20 bshadowedlite layerwhite">
+			        <IntroImg />
+			        <IntroText content="Economic, Scholarly, and Religious Conditions" />
 			    </div>
 			    <br/>
-			    <div className="row">
-			    	<Summary content={summaries.sources} more={false}/>
-			    	<Summary content={summaries.translations} more={false}/>
-			    	<Summary content={summaries.tools} more={false}/>
-			     </div>
+			    <div className="row m20 bshadowedlite layerwhite" id="introCollab">
+			        <IntroText content="Technical and Interdisciplinary Collaborations" />
+			        <IntroImg />
+			    </div>
+			    <br/>
+			    <div className="row m20 " id="introComp">
+			    	<Introduction content={textIntros.comp} loc={this.props.location} />
+			    	<Introduction content={textIntros.antwerp} loc={this.props.location} />
+			    	<Introduction content={textIntros.london} loc={this.props.location} />
+			    </div>
 					  <div className="row center-block text-center">
-					  	<span className="glyphicon glyphicon-chevron-down"></span>
+					  	<span className="glyphicon glyphicon-chevron-down down" onTouchTap={this.jumpToHash}></span>
 					  </div>
 			  </div>
 			</div>
