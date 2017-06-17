@@ -1,7 +1,58 @@
+body {
+	background-color: #f7f1eb;
+}
+
+.white {
+	color: #fff;
+}
+
 .navbar {
 	height: 8vh;
+	top: 4vh;
+}
+
+.navbarG {
+	height: 4vh;
+}
+
+.bshadowed {
+	box-shadow: 0 0 3px #808080;
+	background-color: #ffffff;
+}
+
+.pre-jumbotron {
+	margin-top: 14vh;
+}
+
+.jumbotron h1, .jumbotron .h1 {
+     color: #fff;
 }
 
 .jumbotron {
-	margin-top: 10vh;
+	background-color:#000000;
+	border-radius: 5px;
+	background-image: url(London-header.png);
+	background-repeat: no-repeat;
+  background-position: center;
+}
+
+.m20 {
+	margin: 20px 0px;
+}
+
+.page {
+	border: solid 0.5px #ffffff;
+	border-radius: 5px;
+	padding: 20px;
+}
+
+.thumb25 {
+	width: 25%;
+	padding: 0px 2% 2% 2%;
+}
+
+.introImg {
+	width: 60%;
+	padding: 2%;
+	border-radius: 5px;
 }

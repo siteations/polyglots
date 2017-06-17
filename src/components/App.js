@@ -4,6 +4,7 @@ import '../stylesheets/style.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
+import Nav from './Nav.js';
 import Header from './Header';
 import IntroExhib from './IntroExhib';
 import IntroPoly from './IntroPoly';
@@ -20,6 +21,7 @@ class App extends Component {
     return (
     <MuiThemeProvider>
       <div className="App Container-Fluid">
+      <Nav />
       <Header />
       <IntroExhib />
       <IntroPoly />

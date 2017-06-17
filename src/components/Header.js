@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 
+import {items} from '../copy/content.js';
+
 const styles = {
   customWidth: {
     width: '100%',
@@ -9,31 +11,27 @@ const styles = {
   },
 };
 
-const items = {
-	home: [
-		{ value: 1, text: 'Polyglot Productions' },//href, label
-		{ value: 2, text: 'Religious Change' },//href, label,
-		{ value: 3, text: 'Newberry Library' },//href, label,
-	],
-	intro: [
-		{ value: 1, text: 'An Introduction to Polyglot Bibles' },
-		{ value: 2, text: '“The Age of Polyglots” (1502-1657)' },//href, label
-		{ value: 3, text: 'Introducing: Complutensian (1517)' },//href, label,
-		{ value: 4, text: 'Introducing: Antwerp (1571)' },//href, label,
-		{ value: 5, text: 'Introducing: London (1657)' },//href, label,
-	],
-	interact: [
-		{ value: 1, text: 'Interact with Polyglot Bibles' },
-		{ value: 2, text: 'Complutensian (1517) Samples' },//href, label,
-		{ value: 3, text: 'Antwerp (1571) Samples' },//href, label,
-		{ value: 4, text: 'London (1657) Samples' },//href, label,
-	],
-	biblio: [
-		{ value: 1, text: 'Bibliography of Polyglot Materials' },//href, label
-		{ value: 2, text: 'Secondary Polyglot Readings' },//href, label,
-		{ value: 3, text: 'Newberry Catalog' },//href, label,
-	],
-}
+// const items = {
+// 	home: [
+// 		{ value: 1, text: 'Polyglot Productions' },//href, label
+// 	],
+// 	intro: [
+// 		{ value: 1, text: 'An Introduction to Polyglot Bibles' },
+// 		{ value: 2, text: '“The Age of Polyglots” (1502-1657)' },//href, label
+// 		{ value: 3, text: 'Introducing: Complutensian (1517)' },//href, label,
+// 		{ value: 4, text: 'Introducing: Antwerp (1571)' },//href, label,
+// 		{ value: 5, text: 'Introducing: London (1657)' },//href, label,
+// 	],
+// 	interact: [
+// 		{ value: 1, text: 'Interact with Polyglot Bibles' },
+// 		{ value: 2, text: 'Complutensian (1517) Samples' },//href, label,
+// 		{ value: 3, text: 'Antwerp (1571) Samples' },//href, label,
+// 		{ value: 4, text: 'London (1657) Samples' },//href, label,
+// 	],
+// 	biblio: [
+// 		{ value: 1, text: 'Bibliography of Polyglot Materials' },//href, label
+// 	],
+// };
 
 class Header extends Component {
 	constructor(props) {
@@ -55,7 +53,7 @@ class Header extends Component {
     console.log(this.props.location);
 
 	return (
-	     <div className="navbar navbar-fixed-top">
+	     <div className="navbar navbar-fixed-top bshadowed">
 	      <div className="col-xs-10 col-xs-offset-1" style={{marginTop: '20px'}}>
 
 		        <div className="col-md-3">
