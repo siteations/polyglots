@@ -111,14 +111,29 @@ p,li {
 	fill: #000;
 }
 
+.sources {
+	color: #bf360c;
+	fill: #bf360c;
+}
+
 .red {
 	color: #bf360c;
 	fill: #bf360c;
 }
 
+.translations {
+	color: #0c95bf;
+	fill: #0c95bf;
+}
+
 .blue {
 	color: #0c95bf;
 	fill: #0c95bf;
+}
+
+.tools {
+	color: #bf900c;
+	fill: #bf900c;
 }
 
 .yellow {

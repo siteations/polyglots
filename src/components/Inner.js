@@ -8,13 +8,23 @@ class InnerSVG extends Component {
     };
   }
 
-
-
   render() {
+    let dots = this.props.overlays;
+
+    console.log('sites to add ', dots);
 
 	return (
 	     <g>
-	      	<rect width={this.props.w*.25} height={this.props.h*.25} x={this.props.w*.25} y={this.props.h*.25} onTouchTap={e=>this.props.on(e)} id="cs2" fill="#000" fillOpacity="0.05" stroke="#000" />
+	      	<image width={this.props.w} height={this.props.h} x={0} y={0} xlinkHref="./London-Header.jpg" />
+          <text x="50" y="50"> placeholder image </text>
+          <text x="50" y="75"> placeholder annotation position </text>
+          <g>
+          {dots &&
+            dots.map((site, i)=>{ //placeholder until identified in text
+              return <circle className={site.category} cx="100" cy={i*40+150} r="15" onTouchTap={e=>this.props.on(e)} key={site.id}  id={site.id} label={site.type} />
+            })
+          }
+          </g>
 	    </g>
 	        )
 	}

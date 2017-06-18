@@ -5,16 +5,13 @@ const PanelContents = props => {
 	let element = props.element;
 	let action = props.action;
 	var color='';
-	if (element.category==='sources'){ color = 'red' };
-	if (element.category==='translations'){ color = 'blue' };
-	if (element.category==='tool'){ color = 'green' };
 
 	if (element.src===''){element.src='./London-header.jpg'}; //placeholder photo
 
 	return (
 	     <div className="row" >
 		     <div className="col-md-1">
-			     <h1><span className={`fa fa-circle ${color}`}> </span></h1>
+			     <h1><span className={`fa fa-circle ${element.category}`}> </span></h1>
 		     </div>
 
 		     <div className="col-md-10">
