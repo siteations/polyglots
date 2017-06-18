@@ -106,6 +106,26 @@ p,li {
 	font-family:'Texta';
 }
 
+.black{
+	color: #000;
+	fill: #000;
+}
+
+.red {
+	color: #bf360c;
+	fill: #bf360c;
+}
+
+.blue {
+	color: #0c95bf;
+	fill: #0c95bf;
+}
+
+.yellow {
+	color: #bf900c;
+	fill: #bf900c;
+}
+
 .underline {
 	text-decoration: underline;
 	text-decoration-color: #BF360C;

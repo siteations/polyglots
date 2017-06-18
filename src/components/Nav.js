@@ -21,7 +21,7 @@ class Nav extends Component {
 	return (
 	     <div className="navbarG navbar-fixed-top bshadowed layerwhite">
 	      <div className="col-xs-10 col-xs-offset-1" style={{marginTop: '20px'}}>
-	      	general logo and religious change graphic here
+	      	general logo and religious change graphics/links here
 	      </div>
 	    </div>
 	        )

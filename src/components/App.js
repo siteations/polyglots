@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../stylesheets/bootstrap.css';
+import '../stylesheets/font-awesome.css';
 import '../stylesheets/style.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
