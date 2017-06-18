@@ -18,6 +18,7 @@ class InnerSVG extends Component {
 	      	<image width={this.props.w} height={this.props.h} x={0} y={0} xlinkHref="./London-Header.jpg" />
           <text x="50" y="50"> placeholder image </text>
           <text x="50" y="75"> placeholder annotation position </text>
+          <text x="50" y="75"> modal window positon randomized </text>
           <g>
           {dots &&
             dots.map((site, i)=>{ //placeholder until identified in text
