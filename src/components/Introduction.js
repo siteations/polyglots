@@ -45,6 +45,11 @@ class Introduction extends Component {
 		          </span>
 		          <p>{content.p1}</p>
 		          <button className={`btn btn-default texta `} href="" role="button" onTouchTap={this.handleOpen}>Learn more »</button>
+		          <br/>
+		          <div className="center-block text-center">
+					  	<span className="glyphicon glyphicon-chevron-down down" onTouchTap={e=>this.props.action(`#inter-${content.tab}`)}></span>
+					  	</div>
+
 		          <Dialog
 			          title={content.title}
 			          actions={actions}

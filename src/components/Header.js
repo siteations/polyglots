@@ -17,7 +17,7 @@ class Header extends Component {
     this.state = {
     	home: '#introExhib',
     	intro: '#introPoly',
-    	interact: '#interOptions',
+    	interact: '#inter-Comp',
     	biblio: '#biblio',
     };
   }
@@ -37,7 +37,7 @@ class Header extends Component {
   jumpToHash = () => {
     const hash = this.props.info.location.hash;
     if (hash) {
-      scrollToElement(hash, { offset: -120 });
+      scrollToElement(hash, { offset: -100 });
     }
   }
 

@@ -6,9 +6,13 @@ import scrollToElement from 'scroll-to-element';
 import {summaries, introParagraph, lorem1, lorem2, lorem3, textIntros} from '../copy/content.js';
 
 class IntroPoly extends Component {
+		constructor(props) {
+        super(props);
+				this.state = {};
+				this.jumpToHash=this.jumpToHash.bind(this);
+		}
 
-		jumpToHash = () => {
-    const hash = '#interOptions';
+		jumpToHash = (hash) => {
     this.props.info.history.push(hash);
 
     if (hash) {
@@ -40,13 +44,10 @@ class IntroPoly extends Component {
 			    </div>
 			    <br/>
 			    <div className="row m20 " id="introComp">
-			    	<Introduction content={textIntros.comp} loc={this.props.location} />
-			    	<Introduction content={textIntros.antwerp} loc={this.props.location} />
-			    	<Introduction content={textIntros.london} loc={this.props.location} />
+			    	<Introduction content={textIntros.comp} loc={this.props.location} action={this.jumpToHash} />
+			    	<Introduction content={textIntros.antwerp} loc={this.props.location} action={this.jumpToHash} />
+			    	<Introduction content={textIntros.london} loc={this.props.location} action={this.jumpToHash} />
 			    </div>
-					  <div className="row center-block text-center">
-					  	<span className="glyphicon glyphicon-chevron-down down" onTouchTap={this.jumpToHash}></span>
-					  </div>
 			  </div>
 			</div>
 	        )

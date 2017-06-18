@@ -10,7 +10,7 @@ export const items = {
 		{ value: '#introComp', text: 'Polyglot Editions: Examples (1517-1657)' },//href, label,
 	],
 	interact: [
-		{ value: '#interOptions', text: 'Interact with Editions' },
+		{ value: '#inter-Comp', text: 'Interact with Editions' },
 		{ value: '#inter-Comp', text: 'Complutensian (1517) Spread' },//href, label,
 		{ value: '#inter-Antwerp', text: 'Antwerp (1571) Spread' },//href, label,
 		{ value: '#inter-London', text: 'London (1657) Spread' },//href, label,
@@ -60,6 +60,8 @@ export const summaries = {
 	},
 };
 
+//------------Individual Introductions---------------------
+
 export const textIntros = {
 	comp: {
 		tab: 'Comp',
@@ -81,5 +83,35 @@ export const textIntros = {
 		src1: "./test-thumb.jpg",
 		p1: 'Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.' ,
 		more: 'Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.' ,
+	},
+};
+
+
+//------------Individual Panels---------------------
+
+export const imagePanels = {
+	comp: {
+		tab: 'Comp',
+		title: 'Complutensian (1517)',
+		srcFull: '',
+		sources: [], // x,y,title...index maps to imageLayers
+		translations: [],
+		tools: [],
+	},
+	antwerp: {
+		tab: 'Antwerp',
+		title: 'Antwerp (1571)',
+		srcFull: '',
+		sources: [], // x,y,title...index maps to imageLayers
+		translations: [],
+		tools: [],
+	},
+	london: {
+		tab: 'London',
+		title: 'London (1657)',
+		srcFull: '',
+		sources: [], // x,y,title...index maps to imageLayers
+		translations: [],
+		tools: [],
 	},
 };
