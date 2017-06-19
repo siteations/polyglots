@@ -5,6 +5,24 @@ import scrollToElement from 'scroll-to-element';
 import {summaries, introParagraph} from '../copy/content.js';
 
 class IntroExhib extends Component {
+	constructor(props) {
+        super(props);
+				this.state = {
+					open: false,
+				};
+				this.showInfo=this.showInfo.bind(this);
+				this.hideInfo=this.hideInfo.bind(this);
+		}
+
+	showInfo(){
+  	//console.log(e.target.id);
+  	this.setState({open: true});
+  }
+
+  hideInfo(){
+  	this.setState({open: false});
+  }
+
 
 	jumpToHash = () => {
     const hash = '#introPoly';
@@ -34,9 +52,9 @@ class IntroExhib extends Component {
 			    </div>
 			    <br/>
 			    <div className="row">
-			    	<Summary content={summaries.sources} more={false}/>
-			    	<Summary content={summaries.translations} more={false}/>
-			    	<Summary content={summaries.tools} more={false}/>
+			    	<Summary content={summaries.sources} more={false} open={this.showInfo} close={this.hideInfo} show={this.state.open}/>
+			    	<Summary content={summaries.translations} more={false} open={this.showInfo} close={this.hideInfo} show={this.state.open}/>
+			    	<Summary content={summaries.tools} more={false} open={this.showInfo} close={this.hideInfo} show={this.state.open}/>
 			     </div>
 					  <div className="row center-block text-center m20">
 					  	<span className="glyphicon glyphicon-chevron-down down" onTouchTap={this.jumpToHash}></span>
