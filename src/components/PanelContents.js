@@ -20,8 +20,12 @@ const PanelContents = props => {
 
 			     	<h3>{element.subtitle}</h3>
 			     	<img src={element.src} style={{width: '95%', margin: '2%' , borderRadius: '5px'}} />
-			     	<h5 className="black" >{element.creator}, <em>{element.textTitle}</em>, {element.place}, {element.year} </h5>
+			     	<h5 className="black" >{element.creator} <em>{element.textTitle}</em> {element.place} {element.year} </h5>
 			     	<p>{element.narrative}</p><br/>
+			     	<p className="black" >other sources:</p>
+			     	<ul>
+			     		<li>{element.otherAuthor} <em>{element.otherTitle}</em> {element.otherBib} </li>
+			     	</ul>
 
 			     	<Divider inset={false} />
 			     	<h5 className="red"><a href={element.link} className="red" target="_blank" >Find at the Newberry (new page)</a></h5>

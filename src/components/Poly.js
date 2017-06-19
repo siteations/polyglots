@@ -40,9 +40,7 @@ class Poly extends Component {
 
   showInfo(e){
   	console.log(e.target.id);
-  	this.setState({open: true, element: e.target.id });
-  	if (this.state.position==='5%'){this.setState({position:'55%'})};
-  	if (this.state.position==='55%'){this.setState({position:'5%'})};
+  	this.setState({open: true, element: e.target.id, position: e.target.attributes.value.value });
   }
 
   hideInfo(e){
@@ -121,9 +119,9 @@ class Poly extends Component {
 							<button className={`btn btn-default texta `} href="" role="button" onTouchTap="">Interaction Guide (Annotated)</button>
 						</div>
 					</div>
-					<div className="text-center bshadowInner layerwhite" style={{borderRadius: '5px'}}>
-						<svg width={this.state.size[0]*.97} height={this.state.size[0]*.52} viewBox={`0 0 ${this.state.size[0]*.97} ${this.state.size[0]*.52}`}>
-							<InnerSVG w={this.state.size[0]*.97} h={this.state.size[0]*.52} overlays={overlays} details={details} on={this.showInfo} />
+					<div className="text-center center-block bshadowInner layerwhite" style={{borderRadius: '5px', width:`${this.state.size[0]*.795}` }}>
+						<svg width={this.state.size[0]*.795} height={this.state.size[0]*.52} viewBox={`0 0 ${this.state.size[0]*.795} ${this.state.size[0]*.52}`}>
+							<InnerSVG w={this.state.size[0]*.795} h={this.state.size[0]*.52} overlays={overlays} details={details} on={this.showInfo} select={key.toLowerCase()} />
 						</svg>
 						<Dialog
 			          actions={actions}

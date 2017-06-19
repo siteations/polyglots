@@ -116,6 +116,16 @@ p,li {
 	fill: #bf360c;
 }
 
+.sourceStroke {
+	fill: #bf360c;
+	fill-opacity: .02;
+	stroke:#bf360c;
+	stroke-width: 2px;
+	stroke-dasharray: 2px;
+    rx: 5px;
+    ry: 5px;
+}
+
 .red {
 	color: #bf360c;
 	fill: #bf360c;
@@ -124,6 +134,16 @@ p,li {
 .translations {
 	color: #0c95bf;
 	fill: #0c95bf;
+}
+
+.transStroke {
+	fill: #0c95bf;
+	fill-opacity: .02;
+	stroke:#0c95bf;
+	stroke-width: 2px;
+	stroke-dasharray: 2px;
+  rx: 5px;
+  ry: 5px;
 }
 
 .blue {
@@ -135,6 +155,17 @@ p,li {
 	color: #bf900c;
 	fill: #bf900c;
 }
+
+.toolsStroke {
+	fill: #bf900c;
+	fill-opacity: .02;
+	stroke:#bf900c;
+	stroke-width: 2px;
+	stroke-dasharray: 2px;
+    rx: 5px;
+    ry: 5px;
+}
+
 
 .yellow {
 	color: #bf900c;

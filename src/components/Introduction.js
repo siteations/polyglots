@@ -40,7 +40,7 @@ class Introduction extends Component {
 	        	<div className={`bshadowedlite layerwhite`}>
 		          <h2 className="underline">{content.title}</h2>
 		          <span className="center-block">
-		          	<img src={content.src1} style={{width:'80%', margin: '2%' , borderRadius: '5px'}} />
+		          	<img src={content.src1} style={{width:'70%', margin: '2%' , borderRadius: '5px'}} />
 
 		          </span>
 		          <p>{content.p1}</p>
@@ -51,13 +51,21 @@ class Introduction extends Component {
 					  	</div>
 
 		          <Dialog
-			          title={content.title}
 			          actions={actions}
 			          modal={true}
 			          open={this.state.open}
 			          contentStyle={{width:'70%', maxWidth: 'none' }}
+			          autoScrollBodyContent={true}
 			        >
-			          text establishing history here.
+			        <div className="row">
+			        	<div className="col-md-5 m20">
+			        		<img src={content.src1} style={{width:'90%', margin: '2%' , borderRadius: '5px'}} />
+			        	</div>
+			        	<div className="col-md-6">
+			        		<h2 className="black underline">An Overview: {content.title}</h2>
+			          	{content.more}
+			          </div>
+			        </div>
 			        </Dialog>
 
 		          </div>
