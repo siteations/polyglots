@@ -6,6 +6,7 @@ import PanelContents from './PanelContents.js';
 
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
+//import ImageMagnifier from './ImageMagnifier.js';
 
 class Poly extends Component {
 		constructor(props) {
@@ -19,6 +20,7 @@ class Poly extends Component {
 					translations: true,
 					tools: true,
 					list: [],
+					mag:false,
 				};
 				this.showInfo=this.showInfo.bind(this);
 				this.hideInfo=this.hideInfo.bind(this);
