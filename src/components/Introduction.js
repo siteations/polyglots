@@ -43,7 +43,7 @@ class Introduction extends Component {
 		          	<img src={content.src1} style={{width:'70%', margin: '2%' , borderRadius: '5px'}} />
 
 		          </span>
-		          <p>{content.p1}</p>
+		          <p className="plarge">{content.p1}</p>
 		          <button className={`btn btn-default texta `} href="" role="button" onTouchTap={this.handleOpen}>Learn more »</button>
 		          <br/>
 		          <div className="center-block text-center">
@@ -63,7 +63,7 @@ class Introduction extends Component {
 			        	</div>
 			        	<div className="col-md-6">
 			        		<h2 className="black underline">An Overview: {content.title}</h2>
-			          	{content.more}
+			          	<p className="plarge">{content.more}</p>
 			          </div>
 			        </div>
 			        </Dialog>

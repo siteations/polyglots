@@ -40,22 +40,34 @@ class IntroExhib extends Component {
 				<div className="page bshadowed layer1" >
 					<div className="jumbotron">
 			      <div className="text-center">
-			        <h1 className="white pjheader">Polyglot Productions</h1>
-			        <h3 className="white">Polyglot Bibles Subtitle here</h3><br/>
-			        <p className="white">Simple One-Line introduction to the Project/History</p>
+			        <h1 className="white pjheader">Exploring the Great Polyglots</h1>
+			        <h3 className="white">1514-1657</h3><br/>
+			        <p className="white">Uncover the intellectual roots, technical foundation, and applications for the great polyglot Bibles,<br/> the monuments to early modern religious devotion, critical scholarship, and technical skill.</p>
 			      </div>
 			    </div>
 			    <div className="row">
 			        <div className="col-md-8 col-md-offset-2">
-			          <h4><em>Briefly introduce what polyglots are and why they are cool.</em> {introParagraph}</h4>
+			        {introParagraph &&
+			        	introParagraph.map(para => {
+			        		let spl = para.indexOf('.')+ 1;
+			        		let lead = para.substring(0,spl), body=para.substring(spl);
+
+			        		return (<div>
+			        		        <h4 className="m20 "><span style={{fontSize:'1.25em',lineHeight: '1.5em'}}>{lead}</span></h4>
+			        		        <p className="plarge">{body}</p>
+			        		        <br/>
+			        		        </div>
+			        		        )
+			        	})
+			        }
 			        </div>
 			    </div>
 			    <br/>
-			    <div className="row">
+			    {/*<div className="row">
 			    	<Summary content={summaries.sources} more={false} open={this.showInfo} close={this.hideInfo} show={this.state.open}/>
 			    	<Summary content={summaries.translations} more={false} open={this.showInfo} close={this.hideInfo} show={this.state.open}/>
 			    	<Summary content={summaries.tools} more={false} open={this.showInfo} close={this.hideInfo} show={this.state.open}/>
-			     </div>
+			     </div>*/}
 					  <div className="row center-block text-center m20">
 					  	<span className="glyphicon glyphicon-chevron-down down" onTouchTap={this.jumpToHash}></span>
 					  </div>

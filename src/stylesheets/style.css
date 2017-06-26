@@ -273,3 +273,7 @@ p,li {
 	padding: 2%;
 	border-radius: 5px;
 }
+
+.plarge {
+	font-size: 1.2em;
+}

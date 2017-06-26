@@ -8,14 +8,16 @@ export const IntroImg = props => {
 	return (
 			        <div className="col-md-4 m20">
 			        	<img src="./London-header.jpg" style={{width:'95%', margin: '2%' , borderRadius: '5px'}} />
-			        	<p>caption: </p>
+			        	<p>caption: tbd</p>
 
+			        {/*
 			          <h4><em>Details information or other?</em></h4>
 			          <ul>
 			          	<li>this</li>
 			          	<li>that</li>
 			          	<li>etc</li>
 			          </ul>
+			        */}
 
 			        </div>
 	        )
@@ -23,26 +25,23 @@ export const IntroImg = props => {
 
 export const IntroText = props => {
 	let content = props.content;
+	let texts = props.texts;
 	// let more = props.more;
 
 	return (
 					<div className="col-md-8 bshadowlite layerfullwhite">
 			        <h2 className="underline">{content}</h2>
-			          <h4><em>Describe the economic, scholarly, and religious conditions that created the “age of polyglots” (1502-1657).</em></h4>
+			          <h4><em>{texts[0]}</em></h4>
 			          <div className="col-md-6 m20">
-			          	<h4>section header</h4>
-			          	<p> {lorem1} </p><br/>
-			          	<h4>section header</h4>
-			          	<p> {lorem3} </p>
+			          	<p className='plarge'> {texts[1]} </p><br/>
 			          </div>
 			          <div className="col-md-6 m20">
-			          	<h4>section header</h4>
-			          	<p> {lorem2}</p><br/>
-			          	<ul>
+			          	<p className='plarge'> {texts[2]}</p><br/>
+			          	{/*<ul>
 			          	<li>biblio or other</li>
 			          	<li>in this space</li>
 			          	<li>etc</li>
-			          </ul>
+			          	</ul>*/}
 			          </div>
 			    		</div>
 	        )

@@ -3,7 +3,7 @@ import {IntroImg, IntroText} from'./IntroRows';
 import Introduction from './Introduction.js';
 import scrollToElement from 'scroll-to-element';
 
-import {summaries, introParagraph, lorem1, lorem2, lorem3, textIntros} from '../copy/content.js';
+import {summaries, introParagraph, lorem1, intro2, intro3, textIntros} from '../copy/content.js';
 
 class IntroPoly extends Component {
 		constructor(props) {
@@ -29,18 +29,18 @@ class IntroPoly extends Component {
 			      <div className="text-center">
 			        <h1 className="pjheader">"The Age of Polyglots"</h1>
 			        <h2 className="underline">1502-1657</h2>
-			        <h3>Conditions and Collaborations spurring Polyglot Bible Creation and Dissemination</h3><br/>
+			        <h3>The Conditions and Collaborations of Polyglot Bible Creation and Dissemination</h3><br/>
 			        <img src="" />
 			      </div>
 			    </div>
 			    <div className="row m20 bshadowedlite layerwhite">
-			        <IntroImg />
-			        <IntroText content="Economic, Scholarly, and Religious Conditions" />
+			        <IntroImg images=""/>
+			        <IntroText content="Economic, Scholarly, and Religious Conditions" texts={intro2}/>
 			    </div>
 			    <br/>
 			    <div className="row m20 bshadowedlite layerwhite" id="introCollab">
-			        <IntroText content="Technical and Interdisciplinary Collaborations" />
-			        <IntroImg />
+			        <IntroText content="Technical and Interdisciplinary Collaborations" texts={intro3} />
+			        <IntroImg images="" />
 			    </div>
 			    <br/>
 			    <div className="row m20 " id="introComp">
