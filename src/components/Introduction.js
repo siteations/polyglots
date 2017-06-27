@@ -40,7 +40,7 @@ class Introduction extends Component {
 	        	<div className={`bshadowedlite layerwhite`}>
 		          <h2 className="underline">{content.title}</h2>
 		          <span className="center-block">
-		          	<img src={content.src1} style={{width:'70%', margin: '2%' , borderRadius: '5px'}} />
+		          	<img src={content.src1} style={{ maxHeight: '200px', margin: '2%' , borderRadius: '5px'}} />
 
 		          </span>
 		          <p className="plarge">{content.p1}</p>

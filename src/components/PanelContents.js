@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Divider from 'material-ui/Divider';
+import ImageSlider from './ImageSlider.js';
 
 const PanelContents = props => {
 	let element = props.element;
 	let action = props.action;
 	var color='';
 
-	if (element.src===''){element.src='./London-header.jpg'}; //placeholder photo
+	if (element.src[0]===''){element.src=['./London-header.jpg']}; //placeholder photo
 
 	//<img src={element.src} style={{width: '95%', margin: '2%' , borderRadius: '5px'}} />
 
@@ -19,8 +20,8 @@ const PanelContents = props => {
 		     <div className="col-md-10">
 			     	<h1 className="black">{element.title}</h1><br/>
 			     	<Divider inset={false} />
-
 			     	<h3>{element.subtitle}</h3>
+			     	<ImageSlider images={element.src} />
 			     	<h5 className="black" >{element.creator}. <em>{element.textTitle}.</em> {element.place} {element.year} </h5>
 			     	<p>{element.narrative}</p><br/>
 			     	<p className="black" >other sources:</p>

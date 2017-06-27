@@ -34,13 +34,13 @@ class IntroPoly extends Component {
 			      </div>
 			    </div>
 			    <div className="row m20 bshadowedlite layerwhite">
-			        <IntroImg images=""/>
+			        <IntroImg src="./resampled/bon_1928_sig_a3v_a4r.jpg" title="Specimen quinquaginta diversarum atque inter se differentium linguarum, & dialectorum."/>
 			        <IntroText content="Economic, Scholarly, and Religious Conditions" texts={intro2}/>
 			    </div>
 			    <br/>
 			    <div className="row m20 bshadowedlite layerwhite" id="introCollab">
 			        <IntroText content="Technical and Interdisciplinary Collaborations" texts={intro3} />
-			        <IntroImg images="" />
+			        <IntroImg src="./resampled/case_x_3_44_pg_38_39.jpg" title="Introductio ad lectionem linguarum orientalium : Hebraicae, Chaldaicae, Samaritanae, Syriacae, Arabicae, Persicae, Aethiopicae, Armenae, Coptae."/>
 			    </div>
 			    <br/>
 			    <div className="row m20 " id="introComp">

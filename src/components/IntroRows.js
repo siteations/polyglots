@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import {summaries, introParagraph, lorem1, lorem2, lorem3} from '../copy/content.js';
 
 export const IntroImg = props => {
-	// let content = props.content;
-	// let more = props.more;
+	let image = props.src;
+	let title = props.title;
 
 	return (
 			        <div className="col-md-4 m20">
-			        	<img src="./London-header.jpg" style={{width:'95%', margin: '2%' , borderRadius: '5px'}} />
-			        	<p>caption: tbd</p>
+			        	<img src={image} style={{width:'95%', margin: '2%' , borderRadius: '5px'}} />
+			        	<p>Text: <em>{title}</em></p>
 
 			        {/*
 			          <h4><em>Details information or other?</em></h4>

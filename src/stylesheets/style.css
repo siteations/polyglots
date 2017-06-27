@@ -233,6 +233,7 @@ p,li {
 	border-radius: 5px;
 	padding: 10px;
 	width:99%;
+	margin-top: 20px;
 	margin-left: 0px;
 	margin-right: 0px;
 }
@@ -251,6 +252,10 @@ p,li {
 	background-image: url(London-header.png);
 	background-repeat: no-repeat;
   background-position: center;
+}
+
+.pad10 {
+	padding: 0px 10px;
 }
 
 .m20 {
