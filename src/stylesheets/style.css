@@ -198,7 +198,7 @@ p,li {
 }
 
 .navbar {
-	height: 8vh;
+	min-height: 8vh;
 	top: 4vh;
 }
 
@@ -238,7 +238,7 @@ p,li {
 }
 
 .pre-jumbotron {
-	margin-top: 14vh;
+	margin-top: 15vh;
 }
 
 .jumbotron h1, .jumbotron .h1 {

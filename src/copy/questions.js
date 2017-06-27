@@ -59,3 +59,20 @@
 						otherTitle: 'In The Text of the Hebrew Bible and Its Editions: Studies in Celebration of the Fifth Centennial of the Complutensian Polyglot. Supplements to the Textual History of the Bible 1.',
 						otherBib: 'Leiden: Brill, 2014, 3-18.',
 					},
+
+					{
+					id: 'at2',
+					type: 'Latin Vulgate',
+					category: 'translations',
+					title: 'Royal Patronage',
+					subtitle: 'Polyglots as signs of political power',
+					image: 'Wing oversize ZP 5465 .P7013, frontispiece',
+					src:'', //again no zp 5465...
+					metadata: '',
+					creator: 'Artist? – Ask Walter Melion',
+					textTitle: '',
+					place: 'Antwerp, Belgium',
+					year: '1571',
+					narrative: 'i.	We should be talking about patronage somewhere, and we could use that spectacular frontispiece of Hispania from this edition to show Philip II’s involvement in the project as a way of contributing to the Counter Reform. This is where Reed’s comment about “the Counter-Reformation in folio” should come in. ii.	We could also mention Plantin’s political and economic motivations here, or the fact that the majority of the scholars who worked on the project were actually Protestants.',
+					link: 'https://i-share.carli.illinois.edu/nby/cgi-bin/Pwebrecon.cgi?DB=local&v1=1&BBRecID=234961',
+					},

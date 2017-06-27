@@ -48,12 +48,12 @@ class Header extends Component {
 	     <div className="navbar navbar-fixed-top bshadowed layer1">
 	      <div className="col-xs-10 col-xs-offset-1" style={{marginTop: '20px'}}>
 
-		        <div className="col-md-3">
+		        <div className="col-sm-3">
 			        <DropDownMenu
 				          value={this.state.home}
 				          onChange={this.handleChangeHome}
 				          style={styles.customWidth}
-				          autoWidth={false}
+				          autoWidth={true}
 				          className={'appareo'}
 				        >
 				        {items.home &&
@@ -62,12 +62,12 @@ class Header extends Component {
 			        </DropDownMenu>
 		        </div>
 
-		        <div className="col-md-3">
+		        <div className="col-sm-3">
 		        	<DropDownMenu
 				          value={this.state.intro}
 				          onChange={this.handleChangeIntro}
 				          style={styles.customWidth}
-				          autoWidth={false}
+				          autoWidth={true}
 				          className={'appareo'}
 				        >
 				        {items.intro &&
@@ -76,12 +76,12 @@ class Header extends Component {
 			        </DropDownMenu>
 		        </div>
 
-		        <div className="col-md-3">
+		        <div className="col-sm-3">
 		        	<DropDownMenu
 				          value={this.state.interact}
 				          onChange={this.handleChangeInteract}
 				          style={styles.customWidth}
-				          autoWidth={false}
+				          autoWidth={true}
 				          className={'appareo'}
 				        >
 				        {items.interact &&
@@ -90,12 +90,12 @@ class Header extends Component {
 			        </DropDownMenu>
 		        </div>
 
-		        <div className="col-md-3">
+		        <div className="col-sm-3">
 		        	<DropDownMenu
 				          value={this.state.biblio}
 				          onChange={this.handleChangeBiblio}
 				          style={styles.customWidth}
-				          autoWidth={false}
+				          autoWidth={true}
 				          className={'appareo'}
 				        >
 				        {items.biblio &&

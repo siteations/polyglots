@@ -49,7 +49,7 @@ class App extends Component {
 
     return (
     <MuiThemeProvider muiTheme={muiTheme} >
-      <div className="App Container-Fluid">
+      <div className="App container-fluid">
       <Nav />
       <Header info={this.props}/>
       <IntroExhib info={this.props} />
