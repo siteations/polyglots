@@ -70,7 +70,7 @@ export const textIntros = {
 	comp: {
 		tab: 'Comp',
 		title: 'Complutensian (1517)',
-		src1: "./resampled/case_c_211_51_sig_b3v_b4r.jpg",
+		src1: "https://s3.us-east-2.amazonaws.com/polyglot-images/resampled/case_c_211_51_sig_b3v_b4r.jpg",
 		p1: 'At the turn of the 16th century, Cardinal Cardinal Francisco Jiménez de Cisneros was greatly concerned with the poor quality of Biblical scholarship in Spain, and resolved to change it through the foundation of a university at Alcalá de Henares...' ,
 		more: '...(Complutense in Latin). There he gathered experts in Latin, Greek, and Hebrew – including many conversos, Jewish converts to Christianity – to create an edition of the Bible that included Hebrew, Latin, Greek, and Aramaic versions of Scripture on a single page. It was only in this way, Cisneros claimed in the preface to the work, that Christians could experience as much of the spiritual power and depth of the Bible as possible. Cisneros spared no expense; between acquiring manuscripts, supporting the team of scholars, creating new print types, and funding the massive effort to print the six folio volumes, the Complutensian cost an estimated 50,000 gold ducats, an immense amount. Money, however, was not the object; the first polyglot Bible was, more than anything else, an expression of religious devotion. Cisneros even stipulated in his will that a full copy of the Complutensian Bible was to be sold for no more than 6 ½ gold ducats, which guaranteed that his estate would never profit from it. Though the Bible was printed in 1517, the papacy refused to allow the editions to be sold until 1520. Of the 600 copies initially printed, only about 150 survive today.' ,
 	},
@@ -84,7 +84,7 @@ export const textIntros = {
 	london: {
 		tab: 'London',
 		title: 'London (1657)',
-		src1: "./resampled/case_c_211_657_pg_118_119.jpg",
+		src1: "https://s3.us-east-2.amazonaws.com/polyglot-images/resampled/case_c_211_657_pg_118_119.jpg",
 		p1: '[NEED ACTUAL TEXT] Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. ' ,
 		more: '[NEED ACTUAL TEXT] Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.' ,
 	},
