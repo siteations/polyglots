@@ -516,6 +516,25 @@ london: {
 //public/resampled/inc_7763_tp.jpg - prima pars biblia cue?
 ///public/resampled/x_4905_1_tp.jpg - arabic
 
+//lacks images:
+
+//COMPUTENSIAN
+//	[Psalterium Graeco-Latinum cum canticis]. //'The Septuagint'
+//	'Congregatio de Propaganda Fide' / making hebrew letters
+//	'Plantin Polyglot' (also antwerp)
+
+//ANTWERP
+//	'Latin Vulgate' / Pieter Heyden
+// also main text
+
+//LONDON
+//	hebrew?
+//	the arabic final text for 'conversion & education'
+
+
+
+//utility functions for reordering source list
+
 	var sourcePoly = ['comp', 'antwerp', 'london'];
 	var types = ['sources', 'translations', 'tools'];
 	var pri = ['creator', 'textTitle', 'place', 'year', 'link'];
