@@ -356,7 +356,7 @@ london: {
 				title: '',
 				subtitle: '',
 				image: 'no image',
-				src: '',
+				src: [''],
 				metadata:'',
 				creator: '',
 				textTitle: '',
@@ -516,3 +516,55 @@ london: {
 //public/resampled/inc_7763_tp.jpg - prima pars biblia cue?
 ///public/resampled/x_4905_1_tp.jpg - arabic
 
+	var sourcePoly = ['comp', 'antwerp', 'london'];
+	var types = ['sources', 'translations', 'tools'];
+	var pri = ['creator', 'textTitle', 'place', 'year', 'link'];
+	var sec = ['otherAuthor', 'otherTitle', 'otherBib'];
+
+const concatPolys = (obj, sourcePoly, types) => { // strips away volume and type info for simple arra
+	var simpleArr = [];
+
+	sourcePoly.forEach(source=>{
+		types.forEach(type=>{
+		simpleArr = simpleArr.concat(obj[source][type]);
+		})
+	})
+
+	return simpleArr;
+
+}
+
+export const sourceList = concatPolys(eachPanel, sourcePoly, types); //for id matching
+
+
+export const fullSourcePrimary = (arr) => { //obj condensed
+	if (arr[pri[0]] !== '' && arr[pri[0]] !== ' '){
+		var text = `${arr[pri[0]]}. ${arr[pri[1]]}. ${arr[pri[2]]}.`;
+	} else {
+		var text = `${arr[pri[1]]}. ${arr[pri[2]]}.`;
+	};
+	let link = null;
+	if (arr[pri[4]] !== '' && arr[pri[4]] !== ' '){
+		link = arr[pri[4]];
+	}
+
+	return {text, link};
+}
+
+export const fullSourceSecondary = (arr)=>{ //obj condensed
+	if (arr[sec[1]][0] !== '' && arr[sec[1]][0] !== ' '){
+	var text = `${arr[sec[0]][0]}. ${arr[sec[1]][0]}. ${arr[sec[2]][0]}.`;
+	return {text};
+	}
+	return {text:null};
+
+}
+
+export const fullSorted = (arr)=> {
+	const item = {};
+	item.primary = arr.map(fullSourcePrimary);
+	item.secondary = arr.map(fullSourceSecondary);
+	return item;
+}
+
+export const sourceListBib = fullSorted(sourceList);

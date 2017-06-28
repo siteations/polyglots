@@ -26,12 +26,14 @@ const PanelContents = props => {
 			     	<p>{element.narrative}</p><br/>
 			     	<p className="black" >other sources:</p>
 			     	<ul>
-			     		<li>{element.otherAuthor} <em>{element.otherTitle}</em> {element.otherBib} </li>
+			     		{element.otherTitle &&
+			     			element.otherTitle.map((title,i)=> <li>{element.otherAuthor[i]} <em>{title}</em> {element.otherBib[i]} </li>)
+			     		}
 			     	</ul>
 
 			     	<Divider inset={false} />
 			     	<h5 className="red"><a href={element.link} className="red" target="_blank" >Find at the Newberry (new page)</a></h5>
-			     	<button className="btn btn-default texta" value={[element.creator, element.textTitle, element.place, element.year, element.link].join(',')} onTouchTap={e=>action(e)} >Add to List of Titles</button>
+			     	<button className="btn btn-default texta" value={element.id} onTouchTap={e=>action(e)} >Add to List of Titles</button>
 	     	</div>
 	    </div>
 	        )

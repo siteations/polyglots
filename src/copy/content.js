@@ -97,7 +97,7 @@ export const imagePanels = {
 	comp: {
 		tab: 'Comp',
 		title: 'Complutensian (1517)',
-		srcFull: '',
+		srcFull: './computensian_3000.jpg',
 	sources: [
 			{
 				id: 'cs1',
@@ -106,9 +106,9 @@ export const imagePanels = {
 				title: 'Making the Hebrew Text',
 				orig: 2,
 				pos: '55%',
-				x: 506,
-				y: 32,
-				rect: {x:289, y:32, width: 464, height: 1350, stroke: 'sourceStroke', xr:5 }
+				x: 677.5,
+				y: 84.8,
+				rect: {x:485.7, y:84.8, width: 383.5, height: 1229.4, stroke: 'sourceStroke', xr:5 }
 			},
 			{
 				id: 'cs2',
@@ -117,9 +117,9 @@ export const imagePanels = {
 				title: 'The Vulgate',
 				orig: 3,
 				pos: '55%',
-				x: 893,
-				y: 32,
-				rect: {x:753, y:32, width: 279, height: 1350, stroke: 'sourceStroke', xr:5 }
+				x: 996.3,
+				y: 84.8,
+				rect: {x:869.2, y:84.8, width: 254.1, height: 1251.2, stroke: 'sourceStroke', xr:5 }
 			},
 			{
 				id: 'cs3',
@@ -128,9 +128,9 @@ export const imagePanels = {
 				title: 'Aramaic',
 				orig: 4,
 				pos: '55%',
-				x: 1110,
-				y: 1900,
-				rect: {x:753, y:1382, width: 711, height: 517, stroke: 'sourceStroke', xr:5 }
+				x: 1206.6,
+				y: 1785.1,
+				rect: {x:869.2, y:1336, width: 691.5, height: 449, stroke: 'sourceStroke', xr:5 }
 			},
 			{
 				id: 'cs4',
@@ -139,9 +139,9 @@ export const imagePanels = {
 				title: 'The Septuagint',
 				orig: 5,
 				pos: '55%',
-				x: 1248,
-				y: 32,
-				rect: {x:1032, y:32, width: 432, height: 1350, stroke: 'sourceStroke', xr:5 }
+				x: 1342,
+				y: 84.8,
+				rect: {x:1123.3, y:84.8, width: 437.4, height: 1251.2, stroke: 'sourceStroke', xr:5 }
 			},
 			{
 				id: 'cs5',
@@ -150,9 +150,9 @@ export const imagePanels = {
 				title: 'Making Hebrew Type',
 				orig: 8,
 				pos: '5%',
-				x: 2462,
-				y: 84,
-				rect: {x:2244, y:84, width: 465, height: 649, stroke: 'sourceStroke', xr:5 }
+				x: 2478.6,
+				y: 131.8,
+				rect: {x:2316, y:131.8, width: 388, height: 591.2, stroke: 'sourceStroke', xr:5 }
 				},
 			],
 	translations: [
@@ -163,9 +163,9 @@ export const imagePanels = {
 						title: 'Learning Greek',
 						orig: 6,
 						pos: '5%',
-						x: 1716,
-						y: 84,
-						rect: {x:1464, y:84, width: 504, height: 1298, stroke: 'transStroke', xr:5 }
+						x: 1812.7,
+						y: 131.8,
+						rect: {x:1560.7, y:131.8, width: 503.9, height: 1182.4, stroke: 'transStroke', xr:5 }
 					},
 					{
 						id: 'ct2',
@@ -174,9 +174,9 @@ export const imagePanels = {
 						title: 'Calvary on the page',
 						orig: 7,
 						pos: '5%',
-						x: 2106,
-						y: 84,
-						rect: {x:1968, y:84, width: 276, height: 1244, stroke: 'transStroke', xr:5 }
+						x: 2190.3,
+						y: 131.8,
+						rect: {x:2064.7, y:131.8, width: 251.3, height: 1133.2, stroke: 'transStroke', xr:5 }
 
 					},
 				],
@@ -188,9 +188,9 @@ export const imagePanels = {
 					title: 'Finding Fullness of the Word',
 					orig: 1,
 					pos: '55%',
-					x: 184,
-					y: 32,
-					rect: {x:79, y:32, width: 210, height: 1350, stroke: 'toolsStroke', xr:5 }
+					x: 401.1,
+					y: 84.8,
+					rect: {x:305.4, y:84.8, width: 180.2, height: 1229.4, stroke: 'toolsStroke', xr:5 }
 				},
 				{
 					id: 'cto2',
@@ -199,9 +199,9 @@ export const imagePanels = {
 					title: 'Learning God’s Language',
 					orig: 9,
 					pos: '5%',
-					x: 2709,
-					y: 997,
-					rect: {x:2244, y:733, width: 465, height: 595, stroke: 'toolsStroke', xr:5 }
+					x: 2704,
+					y: 963.3,
+					rect: {x:2316, y:723, width: 388, height: 542.1, stroke: 'toolsStroke', xr:5 }
 				},
 				{
 					id: 'cto3',
@@ -210,9 +210,9 @@ export const imagePanels = {
 					title: 'Interperative Editions',
 					orig: 10,
 					pos: '5%',
-					x: 2834,
-					y: 1910,
-					rect: {x:2717, y:1382, width: 204, height: 528, stroke: 'toolsStroke', xr:5 }
+					x: 2796.9,
+					y: 1795.1,
+					rect: {x:2704, y:1265.1, width: 185.8, height: 530, stroke: 'toolsStroke', xr:5 }
 				},
 			],
 	},
@@ -286,23 +286,29 @@ export const imagePanels = {
 	london: {
 		tab: 'London',
 		title: 'London (1657)',
-		srcFull: '',
+		srcFull: './london322_3000.jpg',
 sources: [
 			{
 				id: 'ls1',
 				type: 'Hebrew Text',
 				category: 'sources',
 				title: '',
-				x: '',
-				y: '',
+				orig: 0,
+				pos: '55%',
+				x: 1237.1,
+				y: 1912.1,
+				rect: {x:413.3, y:1319.5, width: 1105.8, height: 592.6, stroke: 'sourceStroke', xr:5 }
 			},
 			{
 				id: 'ls2',
 				type: 'Vulgate Text',
 				category: 'sources',
 				title: '',
-				x: '',
-				y: '',
+				orig: 0,
+				pos: '55%',
+				x: 924.9,
+				y: 67.3,
+				rect: {x:824.8, y:67.3, width: 200.2, height: 1250.5, stroke: 'sourceStroke', xr:5 }
 			},
 		],
 		translations: [
@@ -311,8 +317,11 @@ sources: [
 				type: 'Septuagint Text',
 				category: 'translations',
 				title: 'Matching Prints',
-				x: '',
-				y: '',
+				orig: 0,
+				pos: '55%',
+				x: 1272.1,
+				y: 67.3,
+				rect: {x:1025, y:67.3, width: 494.1, height: 1250.5, stroke: 'transStroke', xr:5 }
 			},
 		],
 		tools: [
@@ -321,40 +330,55 @@ sources: [
 				type: 'Targum Text',
 				category: 'tools',
 				title: 'Supporting Oriental Studies',
-				x: '',
-				y: '',
+				orig: 0,
+				pos: '55%',
+				x: 619,
+				y: 67.3,
+				rect: {x:413.3, y:67.3, width: 411.6, height: 1252.5, stroke: 'toolsStroke', xr:5 }
 			},
 			{
 				id: 'lto2',
 				type: 'Targum Translation',
 				category: 'tools',
 				title: 'Preparing the Way for the Polyglot',
-				x: '',
-				y: '',
+				orig: 0,
+				pos: '55%',
+				x: 712.5,
+				y: 1841,
+				rect: {x:413.3, y:1317.8, width: 598.4, height: 523.2, stroke: 'toolsStroke', xr:5 }
 			},
 			{
 				id: 'lto3',
 				type: 'Arabic Text',
 				category: 'tools',
 				title: 'Arabic Studies',
-				x: '',
-				y: '',
+				orig: 0,
+				pos: '55%',
+				x: 2535.9,
+				y: 1912.1,
+				rect: {x:1569.6, y:889.8, width: 1108.3, height: 1022.3, stroke: 'toolsStroke', xr:5 }
 			},
 			{
 				id: 'lto4',
 				type: 'Syriac Translation',
 				category: 'tools',
 				title: 'Preaching from the Polyglot',
-				x: '',
-				y: '',
+				orig: 0,
+				pos: '55%',
+				x: 2123.8,
+				y: 67.3,
+				rect: {x:1569.6, y:67.3, width: 1108.3, height: 822.5, stroke: 'toolsStroke', xr:5 }
 			},
 			{
 				id: 'lto5',
 				type: 'Arabic Translation',
 				category: 'tools',
 				title: 'Conversion and Education',
-				x: '',
-				y: '',
+				orig: 0,
+				pos: '55%',
+				x: 1990.4,
+				y: 1841,
+				rect: { x:1569.6, y:889.8, width: 841.6, height: 951.2, stroke: 'toolsStroke', xr:5 }
 			}
 		],
 	},

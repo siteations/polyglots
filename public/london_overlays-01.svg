@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 3000 2070" enable-background="new 0 0 3000 2070" xml:space="preserve">
+<g id="background">
+	<image overflow="visible" width="3000" height="2070" xlink:href="london322_3000.jpg" >
+	</image>
+</g>
+<g id="elements">
+	<g id="lto1">
+		<rect x="413.3" y="67" fill="none" stroke="#B22B0A" stroke-width="3" stroke-miterlimit="10" width="411.6" height="1252.5"/>
+		<circle fill="#B22B0A" cx="619" cy="67" r="13.7"/>
+	</g>
+	<g id="ls2">
+		<rect x="824.8" y="67.3" fill="none" stroke="#B22B0A" stroke-width="3" stroke-miterlimit="10" width="200.2" height="1250.5"/>
+		<ellipse fill="#B22B0A" cx="924.9" cy="67.3" rx="13.7" ry="14"/>
+	</g>
+	<g id="lt1">
+		<rect x="1025" y="67.3" fill="none" stroke="#B22B0A" stroke-width="3" stroke-miterlimit="10" width="494.1" height="1250.5"/>
+		<ellipse fill="#B22B0A" cx="1272.1" cy="67.3" rx="13.7" ry="14"/>
+	</g>
+	<g id="ls1">
+			<rect x="413.3" y="1319.5" fill="none" stroke="#B22B0A" stroke-width="3" stroke-miterlimit="10" width="1105.8" height="592.6"/>
+		<ellipse fill="#B22B0A" cx="1237.1" cy="1912.1" rx="13.7" ry="13.5"/>
+	</g>
+	<g id="lto2">
+		<rect x="413.3" y="1317.8" fill="none" stroke="#B22B0A" stroke-width="3" stroke-miterlimit="10" width="598.4" height="523.2"/>
+		<circle fill="#B22B0A" cx="712.5" cy="1841" r="13.7"/>
+	</g>
+	<g id="lto3">
+
+			<rect x="1569.6" y="889.8" fill="none" stroke="#B22B0A" stroke-width="3" stroke-miterlimit="10" width="1108.3" height="1022.3"/>
+		<circle fill="#B22B0A" cx="2535.9" cy="1912.1" r="13.7"/>
+	</g>
+	<g id="lto4">
+		<rect x="1569.6" y="67.3" fill="none" stroke="#B22B0A" stroke-width="3" stroke-miterlimit="10" width="1108.3" height="822.5"/>
+		<circle fill="#B22B0A" cx="2123.8" cy="67.3" r="13.7"/>
+	</g>
+	<g id="lto5">
+		<rect x="1569.6" y="889.8" fill="none" stroke="#B22B0A" stroke-width="3" stroke-miterlimit="10" width="841.6" height="951.2"/>
+		<circle fill="#B22B0A" cx="1990.4" cy="1841" r="13.7"/>
+	</g>
+</g>
+</svg>

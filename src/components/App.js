@@ -17,6 +17,7 @@ import Header from './Header';
 import IntroExhib from './IntroExhib';
 import IntroPoly from './IntroPoly';
 import Poly from './Poly';
+import Biblio from './Biblio';
 
 const muiTheme = getMuiTheme({
   fontFamily: 'texta',
@@ -50,11 +51,12 @@ class App extends Component {
     return (
     <MuiThemeProvider muiTheme={muiTheme} >
       <div className="App container-fluid">
-      <Nav />
       <Header info={this.props}/>
+      <Nav />
       <IntroExhib info={this.props} />
       <IntroPoly info={this.props} />
       <Poly info={this.props} />
+      <Biblio info={this.props} />
       </div>
     </MuiThemeProvider>
     );

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {imagePanels} from '../copy/content.js';
-import {eachPanel} from '../copy/panels.js';
+import {eachPanel, sourceList, fullSourcePrimary, fullSourceSecondary} from '../copy/panels.js';
 import InnerSVG from './Inner.js';
 import PanelContents from './PanelContents.js';
+import { LayerToggleCol, LayerToggle, LayerListCol } from './LayerToggle.js';
 
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
@@ -13,6 +14,7 @@ class Poly extends Component {
 				this.state = {
 					size:[0,0],
 					open: false,
+					open2: false,
 					position: '5%',
 					element: ' ',
 					sources: true,
@@ -23,7 +25,11 @@ class Poly extends Component {
 				};
 				this.showInfo=this.showInfo.bind(this);
 				this.hideInfo=this.hideInfo.bind(this);
+				this.showInfo2=this.showInfo2.bind(this);
+				this.hideInfo2=this.hideInfo2.bind(this);
 				this.listAdd = this.listAdd.bind(this);
+				this.toggleAll = this.toggleAll.bind(this);
+				this.toggleLayer=this.toggleLayer.bind(this);
 		}
 
   componentDidMount() {
@@ -44,8 +50,17 @@ class Poly extends Component {
   	this.setState({open: true, element: e.target.id, position: e.target.attributes.value.value });
   }
 
-  hideInfo(e){
+  hideInfo(){
   	this.setState({open: false});
+  }
+
+  showInfo2(){
+  	console.log('should show');
+  	this.setState({open2: true});
+  }
+
+  hideInfo2(e){
+  	this.setState({open2: false});
   }
 
   toggleLayer(e){
@@ -66,10 +81,12 @@ class Poly extends Component {
   }
 
   listAdd(e){
-  	let item = e.target.value;
+  	let item = e.target.value; //this is the id
+  	let sourceObj = sourceList.filter(source=> source.id===item)[0];
   	let arr = this.state.list;
-  	let arr2 = arr.concat([item]);
+  	let arr2 = arr.concat(fullSourcePrimary(sourceObj), fullSourceSecondary(sourceObj));
   	this.setState({list:arr2});
+  	console.log(this.state.list, arr2);
   }
 
   render() {
@@ -106,12 +123,15 @@ class Poly extends Component {
     ];
 
 	return (
-	   <div className="col-xs-10 col-xs-offset-1" id={id} ref="sizeP" >
+	   <div className="row hidden-print">
+	   <div className="col-xs-1" >
+	   	<LayerListCol list={this.state.list} open={this.state.open2} action={{hideInfo: this.hideInfo2, showInfo:this.showInfo2}} />
+	   </div>
+	   <div className="col-xs-10" id={id} ref="sizeP" >
 				<div className="page bshadowed m20 layer1" id='size' >
 					<div className="row">
 						<div className="col-md-4 text-center">
 							<button className={`btn btn-default texta `} href="" role="button" onTouchTap="">Magnify View</button>
-							<button className={`btn btn-default texta `} href="" role="button" onTouchTap="">Collect Resources to Print</button>
 						</div>
 						<div className="col-md-4 text-center">
 							<h2 className="underline">{data.title}</h2>
@@ -120,9 +140,9 @@ class Poly extends Component {
 							<button className={`btn btn-default texta `} href="" role="button" onTouchTap="">Interaction Guide (Annotated)</button>
 						</div>
 					</div>
-					<div className="text-center center-block bshadowInner layerwhite" style={{borderRadius: '5px', width:`${this.state.size[0]*.795}` }}>
-						<svg width={this.state.size[0]*.795} height={this.state.size[0]*.52} viewBox={`0 0 ${this.state.size[0]*.795} ${this.state.size[0]*.52}`}>
-							<InnerSVG w={this.state.size[0]*.795} h={this.state.size[0]*.52} overlays={overlays} details={details} on={this.showInfo} select={key.toLowerCase()} />
+					<div className="text-center center-block" style={{borderRadius: '5px', width:`${this.state.size[0]*.9}` }}>
+						<svg width={this.state.size[0]*.9} height={this.state.size[0]*.9*.69} viewBox={`0 0 ${this.state.size[0]*.9} ${this.state.size[0]*.9*.69}`}>
+							<InnerSVG w={this.state.size[0]*.9} h={this.state.size[0]*.9*.69} overlays={overlays} details={details} on={this.showInfo} select={key.toLowerCase()} />
 						</svg>
 						<Dialog
 			          actions={actions}
@@ -134,34 +154,25 @@ class Poly extends Component {
 			          <PanelContents element={element} action={this.listAdd}/>
 			        </Dialog>
 					</div>
-					<div className="row text-center">
-						<h3> ~ Toggle Annotations ~ </h3>
-						<div className="col-md-3">
-							<button className={`btn btn-default texta `} role="button" onTouchTap={e=>this.toggleAll(e)}>
-							<span className="fa fa-circle red"> </span> <span className="fa fa-circle blue"> </span> <span className="fa fa-circle green"> </span> All Layers <span className="fa fa-circle-o red"> </span> <span className="fa fa-circle-o blue"> </span> <span className="fa fa-circle-o green"> </span>
-							</button>
-						</div>
-						<div className="col-md-3 text-center">
-							<button className={`btn btn-default texta `} role="button" onTouchTap={e=>this.toggleLayer(e)} value='sources' >
-								<span className="fa fa-circle red"> </span> Sources <span className="fa fa-circle-o red"> </span>
-							</button>
-						</div>
-						<div className="col-md-3 text-center">
-							<button className={`btn btn-default texta `} role="button" onTouchTap={e=>this.toggleLayer(e)} value='translations' >
-								<span className="fa fa-circle blue"> </span> Translations <span className="fa fa-circle-o blue"> </span>
-							</button>
-						</div>
-						<div className="col-md-3 text-center">
-							<button className={`btn btn-default texta `} role="button" onTouchTap={e=>this.toggleLayer(e)} value='tools' >
-								<span className="fa fa-circle yellow"> </span> Tools <span className="fa fa-circle-o yellow"> </span>
-							</button>
-						</div>
-					</div>
+					<LayerToggle all={this.toggleAll} action={this.toggleLayer} />
+
 					<div className="row center-block text-center m20">
 					  	<span className="glyphicon glyphicon-chevron-down down" onTouchTap={this.jumpToHash}></span>
 					 </div>
+
+					<div className="row visible-print-block">
+						<h3 className="m20">The Great Polyglot: Texts of Interest</h3>
+				        <ul>
+								{this.state.list &&
+									this.state.list.map(item => <li className="black" > {item.text} <em>catalog link: </em><a href={item.link} target="blank">{item.link} </a></li>)
+								}
+								</ul>
+					</div>
 				</div>
 		</div>
+
+		<LayerToggleCol all={this.toggleAll} action={this.toggleLayer} />
+	</div>
 	        )
 	}
 };

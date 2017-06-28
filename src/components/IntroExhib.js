@@ -36,6 +36,7 @@ class IntroExhib extends Component {
   render() {
 
 	return (
+	    <div className="row hidden-print">
 			<div className="col-xs-10 col-xs-offset-1 pre-jumbotron" id="introExhib">
 				<div className="page bshadowed layer1" >
 					<div className="jumbotron">
@@ -72,6 +73,7 @@ class IntroExhib extends Component {
 					  	<span className="glyphicon glyphicon-chevron-down down" onTouchTap={this.jumpToHash}></span>
 					  </div>
 			  </div>
+		  </div>
 		  </div>
 	        )
 	}

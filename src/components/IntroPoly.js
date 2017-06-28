@@ -23,6 +23,7 @@ class IntroPoly extends Component {
   render() {
 
 	return (
+	      <div className="row hidden-print">
 	      <div className="col-xs-10 col-xs-offset-1" id="introPoly">
 				<div className="page bshadowed m20 layer1">
 					<div className="">
@@ -49,6 +50,7 @@ class IntroPoly extends Component {
 			    	<Introduction content={textIntros.london} loc={this.props.location} action={this.jumpToHash} />
 			    </div>
 			  </div>
+			</div>
 			</div>
 	        )
 	}
