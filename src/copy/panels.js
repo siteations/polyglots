@@ -28,7 +28,7 @@ export const eachPanel = {
 				title: 'The Vulgate',
 				subtitle: 'The standard Latin translation of the Bible poses a challenge to polyglot scholars',
 				image: 'Case MS 216 folio 005v',
-				src:['./resampled/case_ms_216_folio_005v.jpg', './resampled/case_ms_216_folio_001r.jpg'],
+				src:['./resampled/case_ms_216_folio_001r.jpg','./resampled/case_ms_216_folio_005v.jpg'],
 				metadata: '',
 				creator: '',
 				textTitle: '[Bible][Manuscript]',
@@ -47,7 +47,7 @@ export const eachPanel = {
 				title: 'Aramaic',
 				subtitle: 'Scholars use medieval manuscripts to locate the first translation of the Old Testament',
 				image: 'VAULT Hebrew MS 1, folio 6r-5r',
-				src:['./resampled/hebrew_ms_001_folio_6r_5v.jpg', './resampled/hebrew_ms_01_folio_001r.jpg'], //?
+				src:['./resampled/hebrew_ms_01_folio_001r.jpg', './resampled/hebrew_ms_001_folio_6r_5v.jpg'],
 				metadata: '',
 				creator: ' ',
 				textTitle: 'Targum Onkelos of the Pentateuch',
@@ -60,13 +60,13 @@ export const eachPanel = {
 				otherBib: ['Basel, 1527. VAULT Case PJ4937 .M86 1527'],
 			},
 			{
-				id: 'cs4',
+				id: 'cs4', // no longer included?
 				type:'Septuagint Text (Greek)',
 				category: 'sources',
 				title: 'The Septuagint',
 				subtitle: 'The Greek translation of the Old Testament gains new life in the polyglots',
 				image: 'Folio Inc. 5966, f. something',
-				src: [''], //inc_7763?
+				src: [''],
 				metadata: '',
 				creator: '',
 				textTitle: '[Psalterium Graeco-Latinum cum canticis].',
@@ -80,7 +80,7 @@ export const eachPanel = {
 
 			},
 			{
-				id: 'cs5',
+				id: 'cs5',// no longer included?
 				type: 'Hebrew Text',
 				category: 'sources',
 				title: 'Making Hebrew Type',
@@ -107,7 +107,7 @@ export const eachPanel = {
 						title: 'Learning Greek',
 						subtitle: 'Polyglots bring Greek into conversation with Hebrew for first time',
 						image: 'VAULT Wing ZP 538 .F92848, pp. 26-27',
-						src:['./resampled/wing_zp_538_f9284_tp.jpg', './resampled/wing_zp_538_f9284_sig_a1r.jpg','./resampled/wing_zp_538_f9284_pg_901.jpg', './resampled/wing_zp_538_f9284_pg_901_detail.jpg'], //which in which location
+						src:['./resampled/wing_zp_538_f9284_tp.jpg', './resampled/wing_zp_538_f9284_sig_a1r.jpg','./resampled/wing_zp_538_f9284_pg_901.jpg', './resampled/wing_zp_538_f9284_pg_901_detail.jpg'],
 						metadata: '',
 						creator: '',
 						textTitle: 'Sefer Tehilim = Psalterium Hebraicum.',
@@ -127,7 +127,7 @@ export const eachPanel = {
 						title: 'Calvary on the page',
 						subtitle: 'Printers use page layout to protect the authority of the Vulgate',
 						image: 'Wing oversize ZP 5465 .P7013 from Plantin Polyglot',
-						src:['./plantin-tests.jpg'], //no matching imagery
+						src:['./plantin-tests.jpg'],
 						metadata: '',
 						creator: 'Christopher Plantin, printer',
 						textTitle: 'Plantin Polyglot',
@@ -148,8 +148,7 @@ export const eachPanel = {
 					title: 'Finding Fullness of the Word',
 					subtitle: 'Polyglot scholars promoted understanding Hebrew',
 					image: 'VAULT Case folio C 211 .51, v. 6, f. clxii – Hebrew Vocabulary in Complutensian',
-					src: ['./resampled/case_c_211_51_sig_b3v_b4r.jpg', './resampled/case_c_211_51_tp.jpg'],
-					//larger version of b3v_b4r for computensia overlays
+					src: ['./resampled/case_c_211_51_tp.jpg','./resampled/case_c_211_51_sig_b3v_b4r.jpg'],
 					metadata: '(Creator, Title, Place of Creation, Creation Year)',
 					creator: '',
 					textTitle: 'Hebrew Vocabulary',
@@ -168,7 +167,7 @@ export const eachPanel = {
 					title: 'Learning God’s Language',
 					subtitle: 'Polyglots make widespread study of Hebrew more available',
 					image: 'VAULT Wing folio ZP 538 .F9284, p. SOMETHING',
-					src:['./resampled/wing_zp_538_f9284_tp.jpg', './resampled/wing_zp_538_f9284_sig_a1r.jpg','./resampled/wing_zp_538_f9284_pg_901.jpg', './resampled/wing_zp_538_f9284_pg_901_detail.jpg'], //which for which location ?
+					src:['./resampled/wing_zp_538_f9284_tp.jpg', './resampled/wing_zp_538_f9284_sig_a1r.jpg','./resampled/wing_zp_538_f9284_pg_901.jpg', './resampled/wing_zp_538_f9284_pg_901_detail.jpg'],
 					metadata: '',
 					creator: 'Johann Forster',
 					textTitle: 'Dictionarium Hebraicum nouum',
@@ -271,7 +270,7 @@ antwerp: {
 					title: 'The Polyglot Effect',
 					subtitle: 'Printers place the entire Word of God before readers',
 					image: 'Bonaparte 1928, Sig. A3 verso – A4',
-					src:['./resampled/bon_1928_sig_a3v_a4r.jpg', './resampled/bon_1928_tp.jpg'],
+					src:[ './resampled/bon_1928_tp.jpg', './resampled/bon_1928_sig_a3v_a4r.jpg'],
 					metadata: '',
 					creator: 'Hieronymus Megiser',
 					textTitle: 'Specimen quinquaginta diversarum atque inter se differentium linguarum, & dialectorum',
@@ -290,7 +289,7 @@ antwerp: {
 					title: 'Royal Patronage',
 					subtitle: 'Polyglots as signs of political power',
 					image: 'Wing oversize ZP 5465 .P7013, frontispiece',
-					src:'', //no 5465
+					src:'', //no 5465 unresolved
 					metadata: '',
 					creator: 'Pieter van der Heyden',
 					textTitle: '',
@@ -330,7 +329,7 @@ antwerp: {
 					title: 'Philology and Near Eastern Studies',
 					subtitle: 'Polyglots open up new forms of inquiry using Near Eastern languages',
 					image: 'Case folio F 017 .788, Title Page',
-					src:['./resampled/case_f_017_788_tp.jpg', './resampled/case_f_017_788_pg_286_287.jpg', './resampled/case_f_017_788_pg_326_327.jpg'],
+					src:[ './resampled/case_f_017_788_pg_286_287.jpg', './resampled/case_f_017_788_tp.jpg', './resampled/case_f_017_788_pg_326_327.jpg'],
 					metadata: '',
 					creator: 'Joseph Scaliger',
 					textTitle: 'De emendatione temporum',
@@ -375,7 +374,7 @@ london: {
 				title: 'Polyglots as Bibles',
 				subtitle: 'Other works help readers approach polyglots like any other Bible',
 				image: 'Case folio BS485 .C93 1660, v. 4, p. 5286',
-				src:['./resampled/case_bs_485_c93_1660_pg_5283_5286.jpg', './resampled/case_bs_485_c93_1660_tp_02.jpg', '/public/resampled/case_bs_485_c93_1660_tp_01.jpg'],
+				src:['/public/resampled/case_bs_485_c93_1660_tp_01.jpg', './resampled/case_bs_485_c93_1660_tp_02.jpg', './resampled/case_bs_485_c93_1660_pg_5283_5286.jpg'],
 				metadata: '',
 				creator: '•	John Pearson, editor.',
 				textTitle: 'Critici sacri, sive, Doctissimorum virorum in SS. Biblia annotationes, & tractatus.',
@@ -418,7 +417,7 @@ london: {
 				title: 'Supporting Oriental Studies',
 				subtitle: 'Polyglots lead to creation of other linguistic material',
 				image: 'Case oversize X 442 .15, sig. A',
-				src:['./resampled/case_x_422_15_sig_a2r.jpg', './resampled/case_x_422_15_sig_a2v_b3r.jpg', './resampled/case_x_422_15_tp.jpg'],
+				src:['./resampled/case_x_422_15_tp.jpg', './resampled/case_x_422_15_sig_a2r.jpg', './resampled/case_x_422_15_sig_a2v_b3r.jpg' ],
 				metadata: '',
 				creator: 'Edmund Castell',
 				textTitle: 'Lexicon heptaglotton',
@@ -437,7 +436,7 @@ london: {
 				title: 'Preparing the way for the Polyglot',
 				subtitle: 'Scholars create texts to help others use polyglots',
 				image: 'Case X 3 .44, pp. 38-39 ',
-				src:['./resampled/case_x_3_44_pg_38_39.jpg', './resampled/case_x_3_44_tp.jpg'],
+				src:['./resampled/case_x_3_44_tp.jpg', './resampled/case_x_3_44_pg_38_39.jpg'],
 				metadata: '',
 				creator: 'Brian Walton',
 				textTitle: 'Introductio ad Lectionem Linguarum Orientalium',
@@ -456,7 +455,7 @@ london: {
 				title: 'Arabic Studies',
 				subtitle: 'Polyglots stimulate interest in Arabic materials',
 				image: 'Wing ZP 535 .M4677, pp. 60-61',
-				src:['./resampled/wing_zp_535_m4677_pg_60_61.jpg', './resampled/wing_zp_535_m4677_tp.jpg' ],
+				src:['./resampled/wing_zp_535_m4677_tp.jpg', './resampled/wing_zp_535_m4677_pg_60_61.jpg'],
 				metadata: '',
 				creator: '',
 				textTitle: 'Alphabetum arabicum',
@@ -494,7 +493,7 @@ london: {
 				title: 'Conversion and Education',
 				subtitle: 'Polyglots pave the way for converting and education Near Eastern Christians',
 				image: 'Wing folio ZP 845 .H6905, Proverbs 1',
-				src:[''], //no materials for 845 yet.
+				src:['./resampled/x_4905_1_tp.jpg', './resampled/x_4905_1_sig_3g4.jpg'],
 				metadata: '',
 				creator: '',
 				textTitle: 'The Holy Bible, containing the Old and New Testaments, in the Arabic language.',
