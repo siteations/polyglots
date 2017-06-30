@@ -2,12 +2,13 @@
 
 export const items = {
 	home: [
-		{ value: '#introExhib', text: 'The Great Polyglots' },//href, label
+		{ value: '#introExhib', text: 'Introduction' },//href, label
 	],
 	intro: [
-		{ value: '#introPoly', text: 'Polyglot Contexts (1502-1657)' },
-		{ value: '#introCollab', text: 'Polyglot Collaborations (1502-1657)' },
-		{ value: '#introComp', text: 'Polyglot Editions: Examples (1517-1657)' },//href, label,
+		{ value: '#introPoly', text: 'Cathedrals of Print (1502-1657)' },
+		{ value: '#introHist', text: 'Historical Background (1502-1657)' },
+		{ value: '#introPP', text: 'The Polyglot Project (1502-1657)' },
+		{ value: '#introEd', text: 'Edition Introductions' }
 	],
 	interact: [
 		{ value: '#inter-Comp', text: 'Interact with Editions' },
@@ -22,9 +23,14 @@ export const items = {
 
 //------------Summary Introduction---------------------
 
-export const introParagraph = ['This resource will introduce you to the great polyglot Bibles of the early modern period. These books – editions of the Bible that displayed multiple ancient translations side-by-side – rank among the most impressive monuments to early modern religious devotion, critical scholarship, and technical craftsmanship. This resource will allow you to engage with these great books and uncover the immense scholarly and technical effort that went into making them, the challenges that had to be overcome to produce them, and the different ways in which readers actually used them. ',' Polyglot Bibles had existed since at least the third century, but none could compare with the four “great” polyglot Bibles: the Complutensian (Alcalá de Henares, Spain, 1514-1517), Antwerp (1569-1572), Paris (1628-1645), and London (1654-1657) polyglots. These editions – all of them printed in large, folio-sized editions numbering between 6 and 8 volumes – are the printing equivalent of cathedrals: expressions of devotion to God through the highest level of intellectual and technical mastery. In them, readers encountered the cutting-edge of biblical scholarship and printing technology in books that were meant to bring honor and glory to the nations that produced them. '];
+//older verison
+//export const introParagraph = ['This resource will introduce you to the great polyglot Bibles of the early modern period. These books – editions of the Bible that displayed multiple ancient translations side-by-side – rank among the most impressive monuments to early modern religious devotion, critical scholarship, and technical craftsmanship. This resource will allow you to engage with these great books and uncover the immense scholarly and technical effort that went into making them, the challenges that had to be overcome to produce them, and the different ways in which readers actually used them. ',' Polyglot Bibles had existed since at least the third century, but none could compare with the four “great” polyglot Bibles: the Complutensian (Alcalá de Henares, Spain, 1514-1517), Antwerp (1569-1572), Paris (1628-1645), and London (1654-1657) polyglots. These editions – all of them printed in large, folio-sized editions numbering between 6 and 8 volumes – are the printing equivalent of cathedrals: expressions of devotion to God through the highest level of intellectual and technical mastery. In them, readers encountered the cutting-edge of biblical scholarship and printing technology in books that were meant to bring honor and glory to the nations that produced them. '];
 
-export const intro2 = ['The great polyglots represented the major intellectual and cultural trends of the day. ',' From humanism came the desire to create the most accurate biblical text possible in its original languages, from the Reformation came the impetus to evangelize and unite Christendom using the Bible, from increasing cultural exchanges with the Ottoman empire came the interest in Near Eastern languages, and from print culture came the resolution that all this could be accomplished through the printed word. Polyglots united all these strands of cultural history in the service of religion, and the work behind them went on to fundamentally shape intellectual culture for centuries. ',' The historical and cultural impact of the great polyglots is somewhat overlooked today. In large part, this is due to the fact that the massive collective effort behind these books is hidden by the printed page. This resource will draw back the curtain on the stories behind the three great polyglots in the collection of the Newberry Library: the Complutensian, the Antwerp, and the London. ']
+export const introParagraph = ['This resource will introduce you to the great polyglot Bibles of the early modern period. These books – editions of the Bible that displayed multiple ancient translations side-by-side – rank among the most impressive monuments to early modern religious devotion, critical scholarship, and technical craftsmanship. This resource will allow you to engage with these great books and uncover the immense scholarly and technical effort that went into making them, the challenges that had to be overcome to produce them, and the different ways in which readers actually used them. '];
+
+// export const intro2 = ['The great polyglots represented the major intellectual and cultural trends of the day. ',' From humanism came the desire to create the most accurate biblical text possible in its original languages, from the Reformation came the impetus to evangelize and unite Christendom using the Bible, from increasing cultural exchanges with the Ottoman empire came the interest in Near Eastern languages, and from print culture came the resolution that all this could be accomplished through the printed word. Polyglots united all these strands of cultural history in the service of religion, and the work behind them went on to fundamentally shape intellectual culture for centuries. ',' The historical and cultural impact of the great polyglots is somewhat overlooked today. In large part, this is due to the fact that the massive collective effort behind these books is hidden by the printed page. This resource will draw back the curtain on the stories behind the three great polyglots in the collection of the Newberry Library: the Complutensian, the Antwerp, and the London. ']
+
+export const intro2 = [['Polyglot Bibles had existed since at least the third century, but none could compare with the four “great” polyglot Bibles of the early modern peiod: the Complutensian (Alcalá de Henares, Spain, 1514-1517), Antwerp (1569-1572), Paris (1628-1645), and London (1654-1657) polyglots. These editions – all of them printed in large, folio-sized editions numbering between 6 and 8 volumes – are the printing equivalent of cathedrals: expressions of devotion to God through the highest level of intellectual and technical mastery. In them, readers encountered the cutting-edge of biblical scholarship and printing technology in books that were meant to bring honor and glory to the nations that produced them.'],['The great polyglots represented the major intellectual and cultural trends of the day. From humanism came the desire to create the most accurate biblical text possible in its original languages, from the Reformation came the impetus to evangelize and unite Christendom using the Bible, from increasing cultural exchanges with the Ottoman empire came the interest in Near Eastern languages, and from print culture came the resolution that all this could be accomplished through the printed word. Polyglots united all these strands of cultural history in the service of religion, and the work behind them went on to fundamentally shape intellectual culture for centuries. ',' The historical and cultural impact of the great polyglots is somewhat overlooked today. In large part, this is due to the fact that the massive collective effort behind these books is hidden by the printed page. This resource will draw back the curtain on the stories behind the three great polyglots in the collection of the Newberry Library: the Complutensian, the Antwerp, and the London. ', 'In what follows, you will gain a sense of the individuals who helped create these great books.'], ['In what follows, you will see biblical scholars, linguists, artists, grammarians, translators, editors, printers, and theologians working to create the editions of the Biblical text in various languages, many of which had never appeared before in print. On the technical side, you will see how printers, compositors, type founders, and engravers worked long hours to display these texts in a clear yet appealing manner. On top of all this, you will learn about how diplomats, bishops, publishers, and political operatives scrambled and cajoled to secure the immense amount of money required to fund these projects. In short, our resource will provide an opportunity to engage with early modern religious and intellectual history, and also better understand what goes into the making of a great book.']];
 
 export const intro3 = [' In what follows, you will gain a sense of the individuals who helped create these great books. ',' You will see biblical scholars, linguists, artists, grammarians, translators, editors, printers, and theologians working to create the editions of the Biblical text in various languages. On the technical side, you will see how printers, compositors, type founders, and engravers worked long hours to display these texts in a clear yet appealing manner. On top of all this, you will learn about how diplomats, bishops, publishers, and political operatives scrambled and cajoled to secure the immense amount of money required to fund these projects. ','In short, our resource will provide an opportunity to engage with early modern religious and intellectual history, and also better understand what goes into the making of a great book.'];
 
@@ -37,30 +43,15 @@ export const lorem3 = 'Quisque at elit elit. Donec consequat odio ut malesuada s
 export const summaries = {
 	sources: {
 		title: 'Sources',
-		src1: "./test-thumb.jpg",
-		src2: "./test-thumb.jpg",
-		src3: "./test-thumb.jpg",
-		src4: "./test-thumb.jpg",
-		body: 'Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.' ,
-		more: 'Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.' ,
+		body: 'These sections describe the raw material for the great polyglots: manuscripts, printed books, and other scholarly materials that polyglot scholars used to make their great books.' ,
 	},
 	translations: {
 		title: 'Translations',
-		src1: "./test-thumb.jpg",
-		src2: "./test-thumb.jpg",
-		src3: "./test-thumb.jpg",
-		src4: "./test-thumb.jpg",
-		body: 'Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.' ,
-		more: 'Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.' ,
+		body: 'These fields show the techniques and strategies polyglot scholars adopted to make the many unfamiliar languages of Scripture accessible and understandable to their readers.',
 	},
 	tools: {
 		title: 'Tools',
-		src1: "./test-thumb.jpg",
-		src2: "./test-thumb.jpg",
-		src3: "./test-thumb.jpg",
-		src4: "./test-thumb.jpg",
-		body: 'Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.' ,
-		more: 'Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.' ,
+		body: 'These sections discuss the wide range of scholarly applications for using the great polyglots, and the different types of printed works they made possible.',
 	},
 };
 
@@ -70,6 +61,8 @@ export const textIntros = {
 	comp: {
 		tab: 'Comp',
 		title: 'Complutensian (1517)',
+		subtitle: 'Alacalá de Henares, Spain',
+		subtitle2: 'The first great polyglot Bible',
 		src1: "https://s3.us-east-2.amazonaws.com/polyglot-images/resampled/case_c_211_51_sig_b3v_b4r.jpg",
 		p1: 'At the turn of the 16th century, Cardinal Cardinal Francisco Jiménez de Cisneros was greatly concerned with the poor quality of Biblical scholarship in Spain, and resolved to change it through the foundation of a university at Alcalá de Henares...' ,
 		more: '...(Complutense in Latin). There he gathered experts in Latin, Greek, and Hebrew – including many conversos, Jewish converts to Christianity – to create an edition of the Bible that included Hebrew, Latin, Greek, and Aramaic versions of Scripture on a single page. It was only in this way, Cisneros claimed in the preface to the work, that Christians could experience as much of the spiritual power and depth of the Bible as possible. Cisneros spared no expense; between acquiring manuscripts, supporting the team of scholars, creating new print types, and funding the massive effort to print the six folio volumes, the Complutensian cost an estimated 50,000 gold ducats, an immense amount. Money, however, was not the object; the first polyglot Bible was, more than anything else, an expression of religious devotion. Cisneros even stipulated in his will that a full copy of the Complutensian Bible was to be sold for no more than 6 ½ gold ducats, which guaranteed that his estate would never profit from it. Though the Bible was printed in 1517, the papacy refused to allow the editions to be sold until 1520. Of the 600 copies initially printed, only about 150 survive today.' ,
@@ -78,15 +71,19 @@ export const textIntros = {
 		tab: 'Antwerp',
 		title: 'Antwerp (1571)',
 		src1: "./plantin-tests.jpg",
-		p1: '[NEED IMAGE] Six decades after the Complutensian, the Flemish printer and entrepreneur Christopher Plantin resolved to publish another polyglot, both as an act of devotion and as a way to cement his status as the greatest printer of his time...' ,
+		subtitle: 'Antwerp, Belgium',
+		subtitle2: 'Christopher Plantin’s royal achievement',
+		p1: '[IMAGE TO COME] Six decades after the Complutensian, the Flemish printer and entrepreneur Christopher Plantin resolved to publish another polyglot, both as an act of devotion and as a way to cement his status as the greatest printer of his time...' ,
 		more: '...Originally, Plantin suggested printing a new edition of the Complutensian, but the advances in biblical scholarship since 1517 called for an entirely new edition that would have four languages: Latin, Aramaic, Greek, and Syriac, a relative newcomer to European biblical scholarship. During the 1560s, Plantin began assembling the resources and scholars needed for the project in his printing shop in Antwerp. But the world in which they worked was a far different one than the world the Complutensian scholars had known; the events of the Reformation had made the act of producing a Bible in its original languages very controversial; Protestants demanded that the Bible be translated from its original languages, while Catholic authorities insisted that only the Latin Vulgate was needed. Many in the Church opposed Plantin’s polyglot, and religious tensions in the Low Countries threatened to derail the work completely. Eventually, the printer secured the support of Philip II, the king of Spain, who sent the esteemed biblical scholar Benito Arias Montano to assist with the project. The six-volume Bible was printed between 1569 and 1572 in 1200 complete sets at a cost of at least 40,000 crowns, a third more than what Plantin had originally estimated. The Inquisition scrutinized the work intensely, and did not allow the Bible to be sold until 1580.' ,
 	},
 	london: {
 		tab: 'London',
 		title: 'London (1657)',
-		src1: "https://s3.us-east-2.amazonaws.com/polyglot-images/resampled/case_c_211_657_pg_118_119.jpg",
-		p1: '[NEED ACTUAL TEXT] Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. ' ,
-		more: '[NEED ACTUAL TEXT] Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.' ,
+		subtitle: 'London, England',
+		subtitle2: 'The pinnacle of polyglot scholarship',
+		src1: "https://s3.us-east-2.amazonaws.com/polyglot-images/resampled/case_c_211_657_pg_322_323.jpg",
+		p1: 'The last great polyglot Bible came out of the English Civil War. Brian Walton, an Anglican priest and scholar, was one of many intellectuals loyal to the British monarchy who lost his ecclesiastical position...',
+		more: '... after the victory of the Parliamentary forces under Oliver Cromwell. Eventually, Walton found refuge at Oxford University, where he decided to create another polyglot Bible. Walton was convinced that providing the people with the Bible in its original languages and most ancient translations was the best way to bring order to a faith in chaos. In collaboration with other scholars – most of whom were also displaced after the war – Walton led the production of the most ambitious polyglot yet, featuring 9 languages (Latin, Greek, Hebrew, Aramaic, Syriac, Arabic, Persian, Ethiopic, and Samaritan). Walton believed that all these versions together would make “the truest glasses to represent the sense and reading” of Scripture. As Cromwell’s Council of State was not interested in supporting the project, Walton and his team turned to the English people instead, soliciting subscriptions from the general public beginning in 1652, with a complete polyglot priced at £10. By the end of that year alone, £4,000 had been raised. Thanks to this outpouring of public support, the six-volume polyglot was printed on time between 1654 and 1657. Although not nearly as aesthetically pleasing as its predecessors, the London polyglot bettered them all in terms of its scholarly impact; Walton’s edition and his introductory material were indispensable texts for biblical studies well into the 19th century.' ,
 	},
 };
 
