@@ -28,8 +28,8 @@ const Summary = props => {
 		          	<img className="thumb25" src={content.src3} />
 		          	<img className="thumb25" src={content.src4} />
 		          </span>
-		          <p>{content.body}</p>
-		          <button className={`btn btn-default texta `} href="" role="button" onTouchTap={open}>Learn more »</button>
+		          <p className="plarge">{content.body}</p>
+
 		          <br/>
 							<Dialog
 			          actions={actions}

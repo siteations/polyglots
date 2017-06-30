@@ -39,6 +39,8 @@ class Introduction extends Component {
 	        <div className="col-md-4" >
 	        	<div className={`bshadowedlite layerwhite`}>
 		          <h2 className="underline">{content.title}</h2>
+		          <h5>{content.subtitle}</h5>
+		          <h4>{content.subtitle2}</h4>
 		          <span className="center-block">
 		          	<img src={content.src1} style={{ maxWidth: '70%', maxHeight: '200px', margin: '2%' , borderRadius: '5px'}} />
 
