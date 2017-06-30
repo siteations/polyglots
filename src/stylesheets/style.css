@@ -206,17 +206,32 @@ a:visited {
 }
 
 .navbar {
-	min-height: 4vh;
-	top: 1vh;
+	/*min-height: 4vh;*/
+	top: 4.5vh;
+
+}
+
+.fullheight {
+  min-height: 240px;
+}
+
+.fullheight2 {
+	min-height: 510px;
 }
 
 .navbarG {
-	height: 7.5vh;
-	top: -3vh;
+	/*max-height: 7.2vh;*/
+	top: 0vh;
+	overflow: hidden;
+	background-color: #444444;
 }
 
 .navbarG:hover {
 	top: 0;
+}
+
+.navcolor {
+	background-color: #444444;
 }
 
 .down:hover {
@@ -252,7 +267,7 @@ a:visited {
 }
 
 .pre-jumbotron {
-	margin-top: 15vh;
+	margin-top: 17vh;
 }
 
 .jumbotron h1, .jumbotron .h1 {

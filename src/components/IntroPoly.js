@@ -35,11 +35,6 @@ class IntroPoly extends Component {
 			        <img src="" />
 			      </div>
 			    </div>
-			    <div className="row m20 bshadowedlite layerwhite">
-			        <IntroImg src="https://s3.us-east-2.amazonaws.com/polyglot-images/resampled/bon_1928_sig_a3v_a4r.jpg" title="Specimen quinquaginta diversarum atque inter se differentium linguarum, & dialectorum."/>
-			        <IntroText title={['Cathedrals of Print', 'Historical Background', 'The Polyglot Project']} texts={intro2}/>
-			    </div>
-			    <br/>
 			    <div className="row m20 bshadowedlite layerwhite" id="introComp">
 			        <IntroImg2 src={['https://s3.us-east-2.amazonaws.com/polyglot-images/resampled/bon_1928_sig_a3v_a4r.jpg','https://s3.us-east-2.amazonaws.com/polyglot-images/resampled/case_x_3_44_pg_38_39.jpg']} title={['Specimen quinquaginta diversarum atque inter se differentium linguarum, & dialectorum.', 'Introductio ad lectionem linguarum orientalium : Hebraicae, Chaldaicae, Samaritanae, Syriacae, Arabicae, Persicae, Aethiopicae, Armenae, Coptae.']} />
 			        <IntroText2 title={['Cathedrals of Print', 'Historical Background', 'The Polyglot Project']} texts={intro2}/>

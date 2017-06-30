@@ -42,7 +42,7 @@ class IntroExhib extends Component {
 					<div className="jumbotron">
 			      <div className="text-center">
 			        <h1 className="white pjheader">Cathedrals of Print</h1>
-			        <h3 className="white">Exploring the Great Polyglots, 1514-1657</h3><br/>
+			        <h3 className="white">Exploring the Great Polyglots, 1502-1657</h3><br/>
 			        <p className="white">Discover the sources, innovations, and uses of these monuments to early modern devotion, scholarship, and technical skill.</p>
 			      </div>
 			    </div>

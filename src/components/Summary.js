@@ -20,7 +20,7 @@ const Summary = props => {
 
 	return (
 	        <div className="col-md-4">
-	        	<div className="bshadowedlite layerwhite">
+	        	<div className="bshadowedlite layerwhite fullheight">
 		          <h2 className="underline">{content.title}</h2>
 		          <span>
 		          	<img className="thumb25" src={content.src1} />

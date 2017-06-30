@@ -37,7 +37,7 @@ class Introduction extends Component {
 
 	return (
 	        <div className="col-md-4" >
-	        	<div className={`bshadowedlite layerwhite`}>
+	        	<div className={`bshadowedlite layerwhite fullheight2`}>
 		          <h2 className="underline">{content.title}</h2>
 		          <h5>{content.subtitle}</h5>
 		          <h4>{content.subtitle2}</h4>

@@ -29,7 +29,6 @@ export const IntroText2 = props => {
 
 	return (
 			    <div className="col-md-8 bshadowlite layerfullwhite">
-					option2: formatted in simpler 3 section structure, image to left of each?
 			        <h2 className="underline">{content[0]}</h2>
 			          <p className='plarge'>{texts[0]}</p><br/>
 			          	 <h2 className="underline" id="introHist">{content[1]}</h2>
