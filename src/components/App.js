@@ -1,7 +1,19 @@
 import React, { Component } from 'react';
+// import '../stylesheets/scalar-annotorious.css';
+// import '../stylesheets/scalar-mediaelement.css';
+// import '../stylesheets/reset.css';
+// import '../stylesheets/bootstrap.min.css';
+// import '../stylesheets/bootstrap-accessibility.css';
+// import '../stylesheets/common.css';
+// import '../stylesheets/responsive.css';
+// import '../stylesheets/scalarvis.css';
+// import '../stylesheets/header.css';
+// import '../stylesheets/screen_print.css';
+// import '../stylesheets/font-imports.css';
 import '../stylesheets/bootstrap.css';
 import '../stylesheets/font-awesome.css';
 import '../stylesheets/style.css';
+
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {  deepOrange500, deepOrange900, blueGrey800,
