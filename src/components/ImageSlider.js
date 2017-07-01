@@ -30,13 +30,13 @@ class ImageSlider extends Component {
         <p className="small"><em>click to open/enlarge in a new window</em></p>
 			</div>
 			<div className="row m10">
-				<div className="col-xs-4 col-xs-offset-4 text-center">
+				<div className="col-xs-10 col-xs-offset-1 text-center">
 					{this.props.images.length > 1 &&
 						this.props.images.map((image, i)=>{
 							if(i===this.state.active){
-								return <span id={`slider ${i}`} className="fa fa-circle pad10" value="i" onClick={e=>this.switchIndex(e)} ></span>
+								return <span id={`slider ${i}`} className="fa fa-circle pad10" value="i" onClick={e=>this.switchImg(e)} ></span>
 							} else {
-								return <span id={`slider ${i}`} className="fa fa-circle-o pad10" value="i" onClick={e=>this.switchImg(e)} ></span>
+								return <span id={`slider ${i}`} className="fa fa-circle-o pad10" value="i" onClick={e=>this.switchIndex(e)} ></span>
 							}
 						})
 					}

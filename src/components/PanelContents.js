@@ -22,7 +22,7 @@ const PanelContents = props => {
 			     	<Divider inset={false} />
 			     	<h3>{element.subtitle}</h3>
 			     	<ImageSlider images={element.src} />
-			     	<h5 className="black" >{element.creator}. <em>{element.textTitle}.</em> {element.place} {element.year} </h5>
+			     	<h5 className="black" >{element.creator} <em>{element.textTitle}</em> {element.place} {element.year} </h5>
 			     	<p>{element.narrative}</p><br/>
 			     	<p className="black" >other sources:</p>
 			     	<ul>

@@ -285,28 +285,28 @@ export const imagePanels = {
 		title: 'London (1657)',
 		srcFull: './london322_3000.jpg',
 sources: [
-			{
-				id: 'ls1',
-				type: 'Hebrew Text',
-				category: 'sources',
-				title: '',
-				orig: 0,
-				pos: '55%',
-				x: 1237.1,
-				y: 1912.1,
-				rect: {x:413.3, y:1319.5, width: 1105.8, height: 592.6, stroke: 'sourceStroke', xr:5 }
-			},
-			{
-				id: 'ls2',
-				type: 'Vulgate Text',
-				category: 'sources',
-				title: '',
-				orig: 0,
-				pos: '55%',
-				x: 924.9,
-				y: 67.3,
-				rect: {x:824.8, y:67.3, width: 200.2, height: 1250.5, stroke: 'sourceStroke', xr:5 }
-			},
+			// {
+			// 	id: 'ls1',
+			// 	type: 'Hebrew Text',
+			// 	category: 'sources',
+			// 	title: '',
+			// 	orig: 0,
+			// 	pos: '55%',
+			// 	x: 1237.1,
+			// 	y: 1912.1,
+			// 	rect: {x:413.3, y:1319.5, width: 1105.8, height: 592.6, stroke: 'sourceStroke', xr:5 }
+			// },
+			// {
+			// 	id: 'lto0',
+			// 	type: 'Vulgate Text',
+			// 	category: 'sources',
+			// 	title: '',
+			// 	orig: 0,
+			// 	pos: '55%',
+			// 	x: 924.9,
+			// 	y: 67.3,
+			// 	rect: {x:824.8, y:67.3, width: 200.2, height: 1250.5, stroke: 'sourceStroke', xr:5 }
+			// },
 		],
 		translations: [
 			{
@@ -322,6 +322,17 @@ sources: [
 			},
 		],
 		tools: [
+			{
+				id: 'lto0',
+				type: 'Vulgate Text',
+				category: 'sources',
+				title: '',
+				orig: 0,
+				pos: '55%',
+				x: 924.9,
+				y: 67.3,
+				rect: {x:824.8, y:67.3, width: 200.2, height: 1250.5, stroke: 'toolsStroke', xr:5 }
+			},
 			{
 				id: 'lto1',
 				type: 'Targum Text',
@@ -458,4 +469,46 @@ export const bib = [
 	title: 'Hebrew Studies ',
 	location: '45 (2004), 163-74. ',
 },
+{
+	author: 'Otero, Andrés Piquer and Pablo Torijano Morales, eds. ',
+	title: 'The Text of the Hebrew Bible and Its Editions: Studies in Celebration of the Fifth Centennial of the Complutensian Polyglot. ',
+	location: 'Supplements to the Textual History of the Bible. Leiden: Brill, 2014. ',
+},
+{
+	author: 'Reed, T.B. ',
+	title: 'A History of the Old English Letter Foundries. ',
+	location: '2nd ed. London: Faber and Faber Ltd., 1952. ',
+},
+{
+	author: 'Rekers, Ben. ',
+	title: 'Benito Arias Montano (1527-1598). ',
+	location: 'Leiden: Brill, 1972. ',
+},
+{
+	author: 'Shalev, Zur. ',
+	article: '“Sacred Geography, Antiquarianism and Visual Erudition: Benito Arias Montano and the Maps in the Antwerp Polyglot Bible.”  ',
+	title: 'Imago Mundi ',
+	location: '55 (2003), 56-80. ',
+},
+{
+	author: 'Thomson, Diego. ',
+	article: '“The Critical Sources of the Complutensian Polyglott.”  ',
+	title: 'The Biblical Review and Congregational Magazine ',
+	location: 'vol. 3, Jan-Jun 1847, p. 186. ',
+},
+{
+	author: 'Todd, Henry John. ',
+	title: 'Memoirs of the Life and Writings of the Right Rev. Brian Walton, D.D….to which Is Added, Dr. Walton’s Own Vindication of the London Polyglot. ',
+	location: '2 vols. London: F.C. & J. Rivington, 1821. ',
+},
+{
+	author: 'Wilkinson, Robert J. ',
+	title: 'Orientalism, Aramaic, and Kabbalah in the Catholic Reformation: The First Printing of the Syriac New Testament.  ',
+	location: 'Leiden: Brill, 2007. ',
+},
+{
+	author: '---. ',
+	title: 'The Kabbalistic Scholars of the Antwerp Polyglot Bible. ',
+	location: 'Leiden: Brill, 2007. ',
+}
 ];
