@@ -24,9 +24,9 @@ class Nav extends Component {
           <div className="row">
             <div className="col-xs-1">
             </div>
-            <div className="col-md-1 hidden-xs hidden-sm" style={{maxWwidth: '768px', wordWrap: 'break-word'}}><span className="" style={{verticalAlign: 'baseline'}}>   <a href="https://www.newberry.org" target="_blank" style={{color: '#ffffff'}} ><img src="./newberry_logo_dark.png" style={{height:'40px', width:'130px', margin: '.5vh', float: 'right'}} /></a></span>
+            <div className="col-md-1 hidden-xs hidden-sm" style={{maxWwidth: '768px', wordWrap: 'break-word'}}><span className="" style={{verticalAlign: 'baseline'}}>   <a href="https://www.newberry.org" target="_blank" style={{color: '#ffffff'}} ><img src="./newberry_logo_dark_small.png" style={{height:'40px', margin: '.5vh', float: 'right'}} /></a></span>
             </div>
-            <div className="col-sm-3 col-xs-11"><a id="" href="" className="navbar-link text-uppercase" style={{color: '#ffffff', fontFamily: 'Lato', verticalAlign: 'baseline'}}><br/>Cathedrals of Print</a>
+            <div className="col-sm-3 col-xs-11"><a id="" href="" className="navbar-link text-uppercase" style={{color: '#ffffff', fontFamily: 'Lato', verticalAlign: 'baseline', lineHeight:'3em', letterSpacing: '1px' }}>Cathedrals of Print</a>
             </div>
             <div className="" style={{backgroundColor: '#ae3a3e', float: 'right'}}><a href="https://www.newberry.org/religious-change&#10;" target="_blank"><img className="img-responsive hidden-xs hidden-sm" src="http://publications.newberry.org/dig/rcp/media/religious-change-new-header-5-12.jpg&#10;" /></a>
             </div>
