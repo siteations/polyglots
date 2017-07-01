@@ -12,6 +12,7 @@ import React, { Component } from 'react';
 // import '../stylesheets/font-imports.css';
 import '../stylesheets/bootstrap.css';
 import '../stylesheets/font-awesome.css';
+import '../stylesheets/footer.css';
 import '../stylesheets/style.css';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -30,6 +31,7 @@ import IntroExhib from './IntroExhib';
 import IntroPoly from './IntroPoly';
 import Poly from './Poly';
 import Biblio from './Biblio';
+import {Footer} from './Footer';
 
 const muiTheme = getMuiTheme({
   fontFamily: 'texta',
@@ -69,6 +71,7 @@ class App extends Component {
       <IntroPoly info={this.props} />
       <Poly info={this.props} />
       <Biblio info={this.props} />
+      <Footer />
       </div>
     </MuiThemeProvider>
     );

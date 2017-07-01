@@ -205,6 +205,14 @@ a:visited {
 	color: #fbfbf8;
 }
 
+.bold {
+	font-weight: bold;
+}
+
+.notBold {
+	font-weight: normal;
+}
+
 .navbar {
 	/*min-height: 4vh;*/
 	top: 4.5vh;

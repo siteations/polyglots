@@ -380,3 +380,82 @@ sources: [
 		],
 	},
 };
+
+
+export const bib = [
+{
+	author: 'Abad, Julián Martín. ',
+	article: 'The Printing Press at Alcalá de Henares: The Complutensian Polyglot Bible.” In ',
+	title: 'The Bible As Book: The First Printed Editions. ',
+	location: 'Edited by Paul Saenger and Kimberly Van Kampen. London: The British Library & Oak Knoll Press in association with The Scriptorium Center for Christian Antiquities, 1999, 101-115.',
+},
+{
+	author: 'Barker, Nicholas. ',
+	article: '“The Polyglot Bible.” In ',
+	title: 'The Cambridge History of the Bible Vol. IV: 1557-1695. ',
+	location: 'Edited by John Barnard and D.F. McKenzie with the assistance of Maureen Bell. Cambridge: Cambridge University Press, 2002, 648-651.',
+},
+{
+	author: 'Bell, Dean Phillip. ',
+	title: 'Jews in the Early Modern World. ',
+	location: 'New York: Rowman & Littlefield, 2008.',
+},
+{
+	author: 'Contini, Riccardo. ',
+	article: '“Gli inizi della linguistica siriaca nell’Europa rinascimentale.” In ',
+	title: 'Italia ed Europa nella linguistica del Rinascimento:: confronti e relazioni : atti del Convegno internazionale : Ferrara, Palazzo Paradiso, 20-24 marzo 1991 / a cura di Mirko Tavoni ... [et al.] = Italy and Europe in Renaissance linguistics : comparisons and relations : proceedings of the international conference, Ferrara, Palazzo Paradiso, 20-24 March 1991. ',
+	location: 'Edited by Mirko Tavoni, et al. Modena: F.C. Panini, 1996, 483-502.',
+},
+{
+	author: 'Fernández Marcos, Natalio. ',
+	article: '“Greek Sources of the Complutensian Polyglot.” ',
+	title: 'Jewish Reception of Greek Bible Versions: Studies in Their Use in Late Antiquity and the Middle Ages. ',
+	location: 'Tübingen: Siebeck, 2009, 302-315.',
+},
+{
+	author: 'Hall, Basil. ',
+	title: 'The Great Polyglot Bibles. ',
+	location: 'Publication number 124 of the Book Club of California. San Francisco: Published for its members by the Book Club of California, 1966.',
+},
+{
+	author: 'Hamilton, Alastair. ',
+	article: '“In Search of the Most Perfect Text: The Early Modern Printed Polyglot Bibles from Alcalá (1510-1520) to Brian Walton (1654-1658).” In ',
+	title: 'The New Cambridge History of the Bible vol. 3: From 1450 to 1750. ',
+	location: 'Edited by Euan Cameron. Cambridge: Cambridge University Press, 2016, 138-156. ',
+},
+{
+	author: 'Hendricks, Donald. ',
+	article: '“Profitless Printing – Publication of the Polyglots.” ',
+	title: 'The Journal of Library History ',
+	location: '(1966-1972) 2:2 (1967), 98-116. ',
+},
+{
+	author: 'Lee, John A.L. ',
+	article: '“Dimitrios Doukas and the Accentuation of the New Testament Text of the Complutensian Polyglot.” ',
+	title: 'Novum Testamentum ',
+	location: '47:3 (2005), 250-290. ',
+},
+{
+	author: 'Miller, Peter N. ',
+	article: '“The ‘Antiquarianization’ of Biblical Scholarship and the London Polyglot Bible (1653-57).” ',
+	title: 'Journal of the History of Ideas ',
+	location: '62:3 (2001), 463-482. ',
+},
+{
+	author: '---. ',
+	article: '“Making the Paris Polyglot Bible: Humanism and Orientalism in the Early Seventeenth Century.” In ',
+	title: 'Die europäische Gelehrtenrepublik im Zeitalter des Konfessionalismus, ',
+	location: 'edited by H. Jaumann. Wiesbaden: Harrassowitz, 2001, 59-85.',
+},
+{
+	author: 'O’Connell, S. ',
+	title: 'From Most Ancient Sources: The Nature and Text-Critical Use of the Greek Old Testament Text of the Complutensian Polyglot Bible. ',
+	location: 'Fribourg/Göttingen: Vandenhoeck and Ruprecht, 2006. ',
+},
+{
+	author: 'Ortega-Monasterio, Teresa. ',
+	article: '“Spanish Biblical Hebrew Manuscripts.”  ',
+	title: 'Hebrew Studies ',
+	location: '45 (2004), 163-74. ',
+},
+];
