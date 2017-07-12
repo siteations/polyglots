@@ -55,7 +55,7 @@ class Header extends Component {
     console.log('history?', this.props.info);
 
 	return (
-	     <div className="navbar navbar-fixed-top bshadowed layer1">
+	     <div className="navbar navbar-fixed-top bshadowed layer1 hidden-print">
 	      <div className="col-xs-10 col-xs-offset-1" style={{marginTop: '20px'}}>
 
 		        <div className="col-sm-3 hidden-xs">

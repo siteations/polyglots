@@ -33,7 +33,7 @@ const PanelContents = props => {
 
 			     	<Divider inset={false} />
 			     	<h5 className="red"><a href={element.link} className="red" target="_blank" >Find at the Newberry (new page)</a></h5>
-			     	<button className="btn btn-default texta" value={element.id} onTouchTap={e=>action(e)} >Add to List of Titles</button>
+			     	<button className="btn btn-default texta" value={element.id} onTouchTap={e=>action(e)} >Add Primary & Secondary Source to List (to print)</button>
 	     	</div>
 	    </div>
 	        )

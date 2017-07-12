@@ -24,7 +24,7 @@ class IntroPoly extends Component {
   render() {
 
 	return (
-	      <div className="row hidden-print">
+	      <div className="row hidden-print" id="printPoly">
 	      <div className="col-xs-10 col-xs-offset-1" id="introPoly">
 				<div className="page bshadowed m20 layer1">
 					<div className="">
@@ -40,7 +40,7 @@ class IntroPoly extends Component {
 			        <IntroText2 title={['Cathedrals of Print', 'Historical Background', 'The Polyglot Project']} texts={intro2}/>
 			    </div>
 			    <br/>
-			    <div className="row m20 " id="introEd">
+			    <div className="row m20 hidden-print" id="introEd">
 			    	<Introduction content={textIntros.comp} loc={this.props.location} action={this.jumpToHash} />
 			    	<Introduction content={textIntros.antwerp} loc={this.props.location} action={this.jumpToHash} />
 			    	<Introduction content={textIntros.london} loc={this.props.location} action={this.jumpToHash} />

@@ -16,43 +16,41 @@ export const LayerListCol = (props) => {
         className = {'appareo'}
       />,
       <FlatButton
-        label="Email"
-        primary={true}
-        onTouchTap={action.hideInfo}
-        className = {'appareo'}
-      />,
-      <FlatButton
         label="Print"
         primary={true}
-        onTouchTap={action.hideInfo}
+        onTouchTap={action.printInfo}
         className = {'appareo'}
       />,
 
     ];
 
 	return (
-	  <div className="col-xs-1 hidden-md hidden-sm hidden-xs" >
+	  <div className="hidden-md hidden-sm hidden-xs" >
 	   			<div className="row m20">
 						<h3 className="m20">Select Texts</h3>
-							<button className={`btn btn-default texta m20`} role="button" onTouchTap={action.showInfo}> Show List </button>
-							<button className={`btn btn-default texta m20`} role="button" onTouchTap={action.clearInfo}> Clear List </button>
+							<button className="btn btn-default texta m20 text-center" role="button" onTouchTap={action.showInfo}> Show <br/> List </button>
+							<button className="btn btn-default texta m20 text-center" role="button" onTouchTap={action.clearInfo}> Clear <br/> List </button>
 				</div>
 					<Dialog
 			          actions={actions}
 			          modal={true}
 			          open={open}
 			          autoScrollBodyContent={true}
-			          contentStyle={{width:'70%', maxWidth: 'none' }}
+			          contentStyle={{width:'70%', maxWidth: 'none', paddingTop: '0px', transform: 'translate(0px 0px)'}}
+			          style = {{paddingTop: '0px'}}
+			          className = "hidden-print"
 			        >
-			        <h3 className="m20">The Great Polyglot: Texts of Interest</h3>
-			        <ul>
-							{list &&
-								list.map(item => <li className="black" > {item.text} <a href={item.link} target="blank"><em>catalog link </em></a> (if available) </li>)
-							}
-							{list.length<1 &&
-								<li>select panel text to get started</li>
-							}
-							</ul>
+			        <div className="">
+				        <h3 className="m20">The Great Polyglot: Texts of Interest</h3>
+				        <ul>
+								{list &&
+									list.map(item => <li className="black m10" > {item.text} <a href={item.link} target="blank"><em>catalog link: </em> {item.link} </a></li>)
+								}
+								{list.length<1 &&
+									<li>select panel text to get started</li>
+								}
+								</ul>
+							</div>
 			        </Dialog>
 	   </div>
 		)

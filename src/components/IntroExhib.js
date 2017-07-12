@@ -36,14 +36,14 @@ class IntroExhib extends Component {
   render() {
 
 	return (
-	    <div className="row hidden-print">
+	    <div className="row hidden-print" id="printIntro">
 			<div className="col-xs-10 col-xs-offset-1 pre-jumbotron" id="introExhib">
 				<div className="page bshadowed layer1" >
 					<div className="jumbotron">
 			      <div className="text-center">
-			        <h1 className="white pjheader">Cathedrals of Print</h1>
-			        <h3 className="white">Exploring the Great Polyglots, 1502-1657</h3><br/>
-			        <p className="white">Discover the sources, innovations, and uses of these monuments<br/> to early modern devotion, scholarship, and technical skill.</p>
+			        <h1 className="white pjheader ">Cathedrals of Print</h1>
+			        <h3 className="white ">Exploring the Great Polyglots, 1502-1657</h3><br/>
+			        <p className="white ">Discover the sources, innovations, and uses of these monuments<br/> to early modern devotion, scholarship, and technical skill.</p>
 			      </div>
 			    </div>
 			    <div className="row">
@@ -54,7 +54,7 @@ class IntroExhib extends Component {
 			        		let lead = para.substring(0,spl), body=para.substring(spl);
 
 			        		return (<div>
-			        		        <h4 className="m20 "><span style={{fontSize:'1.25em',lineHeight: '1.5em'}}>{lead} {body}</span></h4>
+			        		        <h4 className="m20"><span style={{fontSize:'1.25em',lineHeight: '1.5em'}}>{lead} {body}</span></h4>
 			        		        <p className="plarge"></p>
 			        		        <br/>
 			        		        </div>
@@ -69,7 +69,7 @@ class IntroExhib extends Component {
 			    	<Summary content={summaries.translations} />
 			    	<Summary content={summaries.tools} />
 			     </div>
-					  <div className="row center-block text-center m20">
+					  <div className="row center-block text-center m20 hidden-print">
 					  	<span className="glyphicon glyphicon-chevron-down down" onTouchTap={this.jumpToHash}></span>
 					  </div>
 			  </div>

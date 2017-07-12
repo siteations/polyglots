@@ -23,6 +23,8 @@ class Poly extends Component {
 					list: [],
 					mag:false,
 				};
+        this.print=this.print.bind(this);
+        this.empty=this.empty.bind(this);
 				this.showInfo=this.showInfo.bind(this);
 				this.hideInfo=this.hideInfo.bind(this);
 				this.showInfo2=this.showInfo2.bind(this);
@@ -52,6 +54,19 @@ class Poly extends Component {
 
   hideInfo(){
   	this.setState({open: false});
+  }
+
+  print(){
+    this.setState({open: false});
+    document.getElementById('printBiblio').attributes[0].value = "row hidden";
+    document.getElementById('printPoly').attributes[0].value = "row hidden-print";
+    document.getElementById('printIntro').attributes[0].value = "row hidden-print";
+    document.getElementById('printList').attributes[0].value = "row visible-print-block";
+    window.print();
+  }
+
+  empty(){
+    this.setState({list: []});
   }
 
   showInfo2(){
@@ -123,9 +138,23 @@ class Poly extends Component {
     ];
 
 	return (
+    <div>
+
+    <div className="row visible-print-block" id="printList">
+          <h3 className="m20">The Great Polyglot: Texts of Interest</h3>
+                <ul>
+                {this.state.list &&
+                  this.state.list.map(item => <li className="black m10" > {item.text} <a href={item.link} target="blank"><em>catalog link: </em> {item.link} </a></li>)
+                }
+                {this.state.list.length<1 &&
+                  <li>select panel text to get started</li>
+                }
+                </ul>
+    </div>
+
 	   <div className="row hidden-print">
 	   <div className="col-xs-1" >
-	   	<LayerListCol list={this.state.list} open={this.state.open2} action={{hideInfo: this.hideInfo2, showInfo:this.showInfo2}} />
+	   	<LayerListCol list={this.state.list} open={this.state.open2} action={{hideInfo: this.hideInfo2, showInfo:this.showInfo2, clearInfo: this.empty, printInfo: this.print}} />
 	   </div>
 	   <div className="col-xs-10" id={id} ref="sizeP" >
 				<div className="page bshadowed m20 layer1" id='size' >
@@ -158,21 +187,13 @@ class Poly extends Component {
 
 					<div className="row center-block text-center m20">
 					  	<span className="glyphicon glyphicon-chevron-down down" onTouchTap={this.jumpToHash}></span>
-					 </div>
-
-					<div className="row visible-print-block">
-						<h3 className="m20">The Great Polyglot: Texts of Interest</h3>
-				        <ul>
-								{this.state.list &&
-									this.state.list.map(item => <li className="black" > {item.text} <em>catalog link: </em><a href={item.link} target="blank">{item.link} </a></li>)
-								}
-								</ul>
 					</div>
 				</div>
 		</div>
 
 		<LayerToggleCol all={this.toggleAll} action={this.toggleLayer} />
 	</div>
+</div>
 	        )
 	}
 };

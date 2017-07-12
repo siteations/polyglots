@@ -20,7 +20,7 @@ class Nav extends Component {
     //minimal approximation of newberry header - no jquery or additional css
 
 	return (
-	     <div className="navbarG navbar-fixed-top bshadowed">
+	     <div className="navbarG navbar-fixed-top bshadowed hidden-print">
           <div className="row">
             <div className="col-xs-1">
             </div>
