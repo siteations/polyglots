@@ -8,11 +8,15 @@ import { LayerToggleCol, LayerToggle, LayerListCol } from './LayerToggle.js';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 
+import {ReactSVGPanZoom, TOOL_NONE, TOOL_AUTO, TOOL_PAN, TOOL_ZOOM_IN, TOOL_ZOOM_OUT} from 'react-svg-pan-zoom';
+
 class Poly extends Component {
 		constructor(props) {
         super(props);
 				this.state = {
 					size:[0,0],
+          width: 1040,
+          height: 700,
 					open: false,
 					open2: false,
 					position: '5%',
@@ -22,6 +26,7 @@ class Poly extends Component {
 					tools: true,
 					list: [],
 					mag:false,
+          tool: TOOL_PAN,
 				};
         this.print=this.print.bind(this);
         this.empty=this.empty.bind(this);
@@ -44,7 +49,7 @@ class Poly extends Component {
   	let sele = window.document.getElementById('size').attributes[0].ownerElement;
   	let width = sele.clientWidth;
   	let height = sele.clientHeight;
-  	this.setState({size:[width, height]});
+  	this.setState({size:[width, height], width: (width*.95), height: (width*.9*.69)});
   }
 
   showInfo(e){
@@ -170,9 +175,21 @@ class Poly extends Component {
 						</div>
 					</div>
 					<div className="text-center center-block" style={{borderRadius: '5px', width:`${this.state.size[0]*.9}` }}>
-						<svg width={this.state.size[0]*.9} height={this.state.size[0]*.9*.69} viewBox={`0 0 ${this.state.size[0]*.9} ${this.state.size[0]*.9*.69}`}>
+          <ReactSVGPanZoom
+            width={this.state.width}
+            height={this.state.height}
+            onClick={event => console.log(event.x, event.y, event.originalEvent)}
+            background="#f4f2ec"
+            SVGBackground="#f4f2ec"
+            preventPanOutside="true"
+            tool={this.state.tool}
+            >
+
+						<svg width={this.state.width} height={this.state.height} viewBox={`0 0 ${this.state.width} ${this.state.height}`}>
 							<InnerSVG w={this.state.size[0]*.9} h={this.state.size[0]*.9*.69} overlays={overlays} details={details} on={this.showInfo} select={key.toLowerCase()} />
 						</svg>
+            </ReactSVGPanZoom>
+
 						<Dialog
 			          actions={actions}
 			          modal={true}
