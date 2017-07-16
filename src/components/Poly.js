@@ -26,7 +26,8 @@ class Poly extends Component {
 					tools: true,
 					list: [],
 					mag:false,
-          tool: TOOL_PAN,
+          zoom: false,
+          modal: '40%',
 				};
         this.print=this.print.bind(this);
         this.empty=this.empty.bind(this);
@@ -37,6 +38,7 @@ class Poly extends Component {
 				this.listAdd = this.listAdd.bind(this);
 				this.toggleAll = this.toggleAll.bind(this);
 				this.toggleLayer=this.toggleLayer.bind(this);
+        this.magToggle = this.magToggle.bind(this);
 		}
 
   componentDidMount() {
@@ -50,11 +52,19 @@ class Poly extends Component {
   	let width = sele.clientWidth;
   	let height = sele.clientHeight;
   	this.setState({size:[width, height], width: (width*.95), height: (width*.9*.69)});
+    if (width<992){
+      this.setState({modal: '90%'});
+
+    }
   }
 
   showInfo(e){
-  	console.log(e.target.id);
+  	console.log(this.state.width);
+
   	this.setState({open: true, element: e.target.id, position: e.target.attributes.value.value });
+    if (this.state.width<992){
+      this.setState({position: '5%'});
+    }
   }
 
   hideInfo(){
@@ -81,6 +91,26 @@ class Poly extends Component {
 
   hideInfo2(e){
   	this.setState({open2: false});
+  }
+
+  magToggle(e){
+    let zoom = this.state.zoom;
+
+    if (zoom){
+
+      let obj = {};
+      obj.sources = obj.translations = obj.tools = true;
+      obj.zoom = false;
+      this.setState(obj);
+
+    } else {
+
+      let obj = {};
+      obj.sources = obj.translations = obj.tools = false;
+      obj.zoom = true;
+      this.setState(obj);
+    }
+
   }
 
   toggleLayer(e){
@@ -159,22 +189,24 @@ class Poly extends Component {
 
 	   <div className="row hidden-print">
 	   <div className="col-xs-1" >
-	   	<LayerListCol list={this.state.list} open={this.state.open2} action={{hideInfo: this.hideInfo2, showInfo:this.showInfo2, clearInfo: this.empty, printInfo: this.print}} />
+	   	<LayerListCol list={this.state.list} open={this.state.open2} action={{hideInfo: this.hideInfo2, showInfo:this.showInfo2, clearInfo: this.empty, printInfo: this.print}} zoom={this.state.zoom} />
 	   </div>
 	   <div className="col-xs-10" id={id} ref="sizeP" >
 				<div className="page bshadowed m20 layer1" id='size' >
 					<div className="row">
 						<div className="col-md-4 text-center">
-							<button className={`btn btn-default texta `} href="" role="button" onTouchTap="">Magnify View</button>
+							<button className={`btn btn-default texta `} onTouchTap={this.magToggle}>Pan & Magnify View</button>
 						</div>
 						<div className="col-md-4 text-center">
 							<h2 className="underline">{data.title}</h2>
 						</div>
 						<div className="col-md-4 text-center">
-							<button className={`btn btn-default texta `} href="" role="button" onTouchTap="">Interaction Guide (Annotated)</button>
+							<button className={`btn btn-default texta `} onTouchTap="">Interaction Guide (Annotated)</button>
 						</div>
 					</div>
 					<div className="text-center center-block" style={{borderRadius: '5px', width:`${this.state.size[0]*.9}` }}>
+          {this.state.zoom===true &&
+            <div>
           <ReactSVGPanZoom
             width={this.state.width}
             height={this.state.height}
@@ -182,7 +214,6 @@ class Poly extends Component {
             background="#f4f2ec"
             SVGBackground="#f4f2ec"
             preventPanOutside="true"
-            tool={this.state.tool}
             >
 
 						<svg width={this.state.width} height={this.state.height} viewBox={`0 0 ${this.state.width} ${this.state.height}`}>
@@ -195,12 +226,31 @@ class Poly extends Component {
 			          modal={true}
 			          open={this.state.open}
 			          autoScrollBodyContent={true}
-			          contentStyle={{width:'40%', maxWidth: 'none', marginLeft: `${this.state.position}` }}
+			          contentStyle={{width:`${this.state.modal}`, maxWidth: 'none', marginLeft: `${this.state.position}` }}
 			        >
 			          <PanelContents element={element} action={this.listAdd}/>
 			        </Dialog>
+              </div>
+          }
+          {this.state.zoom===false &&
+            <div>
+            <svg width={this.state.width} height={this.state.height} viewBox={`0 0 ${this.state.width} ${this.state.height}`}>
+              <InnerSVG w={this.state.size[0]*.9} h={this.state.size[0]*.9*.69} overlays={overlays} details={details} on={this.showInfo} select={key.toLowerCase()} />
+            </svg>
+
+            <Dialog
+                actions={actions}
+                modal={true}
+                open={this.state.open}
+                autoScrollBodyContent={true}
+                contentStyle={{width:`${this.state.modal}`, maxWidth: 'none', marginLeft: `${this.state.position}` }}
+              >
+                <PanelContents element={element} action={this.listAdd}/>
+              </Dialog>
+              </div>
+          }
 					</div>
-					<LayerToggle all={this.toggleAll} action={this.toggleLayer} />
+					<LayerToggle all={this.toggleAll} action={this.toggleLayer} zoom={this.state.zoom}/>
 
 					<div className="row center-block text-center m20">
 					  	<span className="glyphicon glyphicon-chevron-down down" onTouchTap={this.jumpToHash}></span>
@@ -208,7 +258,7 @@ class Poly extends Component {
 				</div>
 		</div>
 
-		<LayerToggleCol all={this.toggleAll} action={this.toggleLayer} />
+		<LayerToggleCol all={this.toggleAll} action={this.toggleLayer} zoom={this.state.zoom} />
 	</div>
 </div>
 	        )

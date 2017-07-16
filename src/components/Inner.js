@@ -25,17 +25,19 @@ class InnerSVG extends Component {
   render() {
     let dots = this.props.overlays;
     let key = this.props.select;
-    let placeholder;
-
-    (key==='london'|| key ==='antwerp')? placeholder= true : placeholder= false;
+    let placeholder = false;
+    var image;
+    if (key==='comp'){image='./computensian_3000.jpg'};
+    if (key==='london'){image='./london322_3000.jpg'};
+    if (key==='antwerp'){image='./antwerp_3000.jpg'};
 
     let ratio = +this.props.w / 3000; //for size sonversions... adjust after zoom.
 
-    console.log('sites to add ', dots, ratio);
+    console.log('sites to add ', dots, ratio, key);
 
 	return (
 	     <g>
-        {key ==='antwerp' &&
+        {/*key ==='antwerp' &&
           <g>
 	      	<image width={this.props.w} height={this.props.h} x={0} y={0} xlinkHref="./London-Header.jpg" />
           <text x="50" y="50"> placeholder image </text>
@@ -49,10 +51,10 @@ class InnerSVG extends Component {
           }
           </g>
           </g>
-        }
-        {key !== 'antwerp' &&
+        */}
+
           <g>
-          <image width={this.props.w} height={this.props.h} x={0} y={0} xlinkHref={(key!=='london')? "./computensian_3000.jpg": "./london322_3000.jpg"} />
+          <image width={this.props.w} height={this.props.h} x={0} y={0} xlinkHref={image} />
           <g>
           {dots &&
             dots.map((site, i)=>{ //placeholder until identified in text
@@ -66,7 +68,7 @@ class InnerSVG extends Component {
           }
           </g>
           </g>
-        }
+
 	    </g>
 	        )
 	}

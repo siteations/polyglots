@@ -17,7 +17,8 @@ export const items = {
 		{ value: '#inter-London', text: 'London (1657) Spread' },//href, label,
 	],
 	biblio: [
-		{ value: '#biblio', text: 'Bibliography for Polyglots' },//href, label
+		{ value: '#biblio', text: 'Bibliography for Polyglots' },
+		{ value: '#about', text: 'About this Site' },//href, label
 	],
 };
 
@@ -63,17 +64,17 @@ export const textIntros = {
 		title: 'Complutensian (1517)',
 		subtitle: 'Alacalá de Henares, Spain',
 		subtitle2: 'The first great polyglot Bible',
-		src1: "https://s3.us-east-2.amazonaws.com/polyglot-images/resampled/case_c_211_51_sig_b3v_b4r.jpg",
+		src1: "./resampled/case_c_211_51_sig_b3v_b4r.jpg",
 		p1: 'At the turn of the 16th century, Cardinal Cardinal Francisco Jiménez de Cisneros was greatly concerned with the poor quality of Biblical scholarship in Spain, and resolved to change it through the foundation of a university at Alcalá de Henares...' ,
 		more: '...(Complutense in Latin). There he gathered experts in Latin, Greek, and Hebrew – including many conversos, Jewish converts to Christianity – to create an edition of the Bible that included Hebrew, Latin, Greek, and Aramaic versions of Scripture on a single page. It was only in this way, Cisneros claimed in the preface to the work, that Christians could experience as much of the spiritual power and depth of the Bible as possible. Cisneros spared no expense; between acquiring manuscripts, supporting the team of scholars, creating new print types, and funding the massive effort to print the six folio volumes, the Complutensian cost an estimated 50,000 gold ducats, an immense amount. Money, however, was not the object; the first polyglot Bible was, more than anything else, an expression of religious devotion. Cisneros even stipulated in his will that a full copy of the Complutensian Bible was to be sold for no more than 6 ½ gold ducats, which guaranteed that his estate would never profit from it. Though the Bible was printed in 1517, the papacy refused to allow the editions to be sold until 1520. Of the 600 copies initially printed, only about 150 survive today.' ,
 	},
 	antwerp: {
 		tab: 'Antwerp',
 		title: 'Antwerp (1571)',
-		src1: "./plantin-tests.jpg",
+		src1: "",
 		subtitle: 'Antwerp, Belgium',
 		subtitle2: 'Christopher Plantin’s royal achievement',
-		p1: '[IMAGE TO COME] Six decades after the Complutensian, the Flemish printer and entrepreneur Christopher Plantin resolved to publish another polyglot, both as an act of devotion and as a way to cement his status as the greatest printer of his time...' ,
+		p1: 'Six decades after the Complutensian, the Flemish printer and entrepreneur Christopher Plantin resolved to publish another polyglot, both as an act of devotion and as a way to cement his status as the greatest printer of his time...' ,
 		more: '...Originally, Plantin suggested printing a new edition of the Complutensian, but the advances in biblical scholarship since 1517 called for an entirely new edition that would have four languages: Latin, Aramaic, Greek, and Syriac, a relative newcomer to European biblical scholarship. During the 1560s, Plantin began assembling the resources and scholars needed for the project in his printing shop in Antwerp. But the world in which they worked was a far different one than the world the Complutensian scholars had known; the events of the Reformation had made the act of producing a Bible in its original languages very controversial; Protestants demanded that the Bible be translated from its original languages, while Catholic authorities insisted that only the Latin Vulgate was needed. Many in the Church opposed Plantin’s polyglot, and religious tensions in the Low Countries threatened to derail the work completely. Eventually, the printer secured the support of Philip II, the king of Spain, who sent the esteemed biblical scholar Benito Arias Montano to assist with the project. The six-volume Bible was printed between 1569 and 1572 in 1200 complete sets at a cost of at least 40,000 crowns, a third more than what Plantin had originally estimated. The Inquisition scrutinized the work intensely, and did not allow the Bible to be sold until 1580.' ,
 	},
 	london: {
@@ -81,7 +82,7 @@ export const textIntros = {
 		title: 'London (1657)',
 		subtitle: 'London, England',
 		subtitle2: 'The pinnacle of polyglot scholarship',
-		src1: "https://s3.us-east-2.amazonaws.com/polyglot-images/resampled/case_c_211_657_pg_322_323.jpg",
+		src1: "./resampled/case_c_211_657_pg_322_323.jpg",
 		p1: 'The last great polyglot Bible came out of the English Civil War. Brian Walton, an Anglican priest and scholar, was one of many intellectuals loyal to the British monarchy who lost his ecclesiastical position...',
 		more: '... after the victory of the Parliamentary forces under Oliver Cromwell. Eventually, Walton found refuge at Oxford University, where he decided to create another polyglot Bible. Walton was convinced that providing the people with the Bible in its original languages and most ancient translations was the best way to bring order to a faith in chaos. In collaboration with other scholars – most of whom were also displaced after the war – Walton led the production of the most ambitious polyglot yet, featuring 9 languages (Latin, Greek, Hebrew, Aramaic, Syriac, Arabic, Persian, Ethiopic, and Samaritan). Walton believed that all these versions together would make “the truest glasses to represent the sense and reading” of Scripture. As Cromwell’s Council of State was not interested in supporting the project, Walton and his team turned to the English people instead, soliciting subscriptions from the general public beginning in 1652, with a complete polyglot priced at £10. By the end of that year alone, £4,000 had been raised. Thanks to this outpouring of public support, the six-volume polyglot was printed on time between 1654 and 1657. Although not nearly as aesthetically pleasing as its predecessors, the London polyglot bettered them all in terms of its scholarly impact; Walton’s edition and his introductory material were indispensable texts for biblical studies well into the 19th century.' ,
 	},
@@ -216,31 +217,40 @@ export const imagePanels = {
 	antwerp: {
 		tab: 'Antwerp',
 		title: 'Antwerp (1571)',
-		srcFull: '',
+		srcFull: './antwerp_3000.jpg',
 	sources: [
 					{
 						id: 'as1',
 						type: 'Syriac Text',
 						category: 'sources',
 						title: 'The Syriac Bible',
-						x: '',
-						y: '',
+						orig: 1,
+						pos: '55%',
+						x: 864,
+						y: 71,
+						rect: {x:560, y:71, width: 608, height: 672.4, stroke: 'sourceStroke', xr:5 }
 					},
 					{
 						id: 'as2',
 						type: 'Greek Text',
 						category: 'sources',
 						title: 'Greek Manuscripts',
-						x: '',
-						y: '',
+						orig: 2,
+						pos: '5%',
+						x: 2184,
+						y: 71,
+						rect: {x:1852, y:71, width: 664, height: 936, stroke: 'sourceStroke', xr:5 }
 					},
 					{
 						id: 'as3',
-						type: 'Greek Text (could be anything here)',
+						type: 'Greek Text',
 						category: 'sources',
 						title: 'Acquiring Manuscripts',
-						x: '',
-						y: '',
+						orig: 3,
+						pos: '5%',
+						x: 2516,
+						y: 1297,
+						rect: {x:1852, y:1007, width: 664, height: 580, stroke: 'sourceStroke', xr:5 }
 					},
 				],
 	translations: [
@@ -249,24 +259,33 @@ export const imagePanels = {
 					type: 'Greek and Latin Text',
 					category: 'translations',
 					title: 'The Polyglot Effect',
-						x: '',
-						y: '',
+						orig: 4,
+						pos: '55%',
+						x: 560,
+						y: 1123.5,
+						rect: {x:560, y:743.4, width: 608, height: 843.6, stroke: 'transStroke', xr:5 }
 				},
 				{
 					id: 'at2',
 					type: 'Latin Vulgate',
 					category: 'translations',
 					title: 'Royal Patronage',
-						x: '',
-						y: '',
+						orig: 5,
+						pos: '5%',
+						x: 1682,
+						y: 71,
+						rect: {x:1512, y:71, width: 344, height: 1516, stroke: 'transStroke', xr:5 }
 					},
 					{
 						id: 'at3',
 						type: 'Hebrew Text',
 						category: 'translations',
 						title: 'Transliterating New Languages',
-						x: '',
-						y: '',
+						orig: 6,
+						pos: '55%',
+						x: 560,
+						y: 1723,
+						rect: {x:560, y:1587, width: 1956, height: 272, stroke: 'transStroke', xr:5 }
 					},
 				],
 	tools: [
@@ -275,8 +294,11 @@ export const imagePanels = {
 					type: 'Syriac Translation',
 					category: 'tools',
 					title: 'Philology and Near Eastern Studies',
-					x: '',
-					y: '',
+						orig: 7,
+						pos: '55%',
+						x: 1399.3,
+						y: 71,
+						rect: {x:1168, y:71, width: 344, height: 1516, stroke: 'toolsStroke', xr:5 }
 				},
 		],
 	},
@@ -325,7 +347,7 @@ sources: [
 			{
 				id: 'lto0',
 				type: 'Vulgate Text',
-				category: 'sources',
+				category: 'tools',
 				title: '',
 				orig: 0,
 				pos: '55%',

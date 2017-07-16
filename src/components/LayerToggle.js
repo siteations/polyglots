@@ -28,8 +28,8 @@ export const LayerListCol = (props) => {
 	  <div className="hidden-md hidden-sm hidden-xs" >
 	   			<div className="row m20">
 						<h3 className="m20">Select Texts</h3>
-							<button className="btn btn-default texta m20 text-center" role="button" onTouchTap={action.showInfo}> Show <br/> List </button>
-							<button className="btn btn-default texta m20 text-center" role="button" onTouchTap={action.clearInfo}> Clear <br/> List </button>
+							<button className="btn btn-default texta m20 text-center" onTouchTap={action.showInfo}> Show <br/> List </button>
+							<button className="btn btn-default texta m20 text-center" onTouchTap={action.clearInfo}> Clear <br/> List </button>
 				</div>
 					<Dialog
 			          actions={actions}
@@ -60,25 +60,26 @@ export const LayerListCol = (props) => {
 export const LayerToggleCol = (props) => {
 	let action = props.action;
 	let all = props.all;
+	console.log('toggles, ', props);
 
 	return (
 	  <div className="col-xs-1 hidden-md hidden-sm hidden-xs" >
 	   			<div className="row m20">
 						<h3 className="m20">Toggle Markup</h3>
 
-							<button className={`btn btn-default btn-block texta m20`} role="button" onTouchTap={all}>
+							<button className={`btn btn-default btn-block texta m20`} onTouchTap={all} disabled={props.zoom}>
 							<span className="fa fa-circle red fa-sm"> </span> <span className="fa fa-circle blue fa-sm"> </span> <span className="fa fa-circle yellow fa-sm"> </span><br/> All Layers
 							</button>
 
-							<button className={`btn btn-default btn-block texta  m20`} role="button" onTouchTap={action} value='sources' >
+							<button className={`btn btn-default btn-block texta  m20`} disabled={props.zoom} onTouchTap={action} value='sources' >
 								<span className="fa fa-circle red fa-sm"> </span><br/> Sources
 							</button>
 
-							<button className={`btn btn-default btn-block texta  m20`} role="button" onTouchTap={action} value='translations' >
+							<button className={`btn btn-default btn-block texta  m20`} disabled={props.zoom} onTouchTap={action} value='translations' >
 								<span className="fa fa-circle blue fa-sm"> </span><br/> Translations
 							</button>
 
-							<button className={`btn btn-default btn-block texta  m20`} role="button" onTouchTap={action} value='tools' >
+							<button className={`btn btn-default btn-block texta  m20`} disabled={props.zoom} onTouchTap={action} value='tools' >
 								<span className="fa fa-circle yellow fa-sm"> </span><br/> Tools
 							</button>
 

@@ -15,8 +15,6 @@ class Biblio extends Component {
 				};
 				this.showInfo=this.showInfo.bind(this);
 				this.hideInfo=this.hideInfo.bind(this);
-				this.print=this.print.bind(this);
-				this.printMain=this.printMain.bind(this);
 		}
 
 	showInfo(){
@@ -28,29 +26,9 @@ class Biblio extends Component {
   	this.setState({open: false});
   }
 
-  print(){
-  	this.setState({print:true});
-  	document.getElementById('printList').attributes[0].value = "row hidden";
-  	document.getElementById('printPoly').attributes[0].value = "row hidden-print";
-    document.getElementById('printIntro').attributes[0].value = "row hidden-print";
-  	document.getElementById('printBiblio').attributes[0].value = "row visible-print-block";
-  	//console.log(other);
-  	window.print();
-  }
-
-  printMain(){
-  	document.getElementById('printList').attributes[0].value = "row hidden";
-  	document.getElementById('printPoly').attributes[0].value = "row ";
-    document.getElementById('printIntro').attributes[0].value = "row ";
-  	document.getElementById('printBiblio').attributes[0].value = "row hidden";
-  	//console.log(other);
-  	window.print();
-
-  }
 
   render() {
-  	var list=this.props.list
-  	var printClass=(this.state.print)? 'visible-print-block': 'hidden';
+  	var list=this.props.list;
 
 	return (
 	 <div>
@@ -60,13 +38,13 @@ class Biblio extends Component {
 
 					<div className="row">
 						<div className="col-md-3 text-center">
-							<button className={`btn btn-default texta `} role="button" onTouchTap={this.printMain}>Print Introduction <br/> (Excluding Polyglot Spreads/Modals)</button>
+							<a href="./polylgot-text.pdf" target="_blank"><button className={`btn btn-default texta `}> Save Site Content <br/></button></a>
 						</div>
 						<div className="col-md-5 text-center">
-							<h2 className="underline">Bibliography for Polyglot Resource</h2>
+							<h2 className="underline">Bibliography for Polyglots</h2>
 						</div>
 						<div className="col-md-3 text-center">
-							<button className={`btn btn-default texta `} role="button" onTouchTap={this.print}>Print Bibliography <br/> (Secondary + Primary Sources)</button>
+							<a href="./polylgot-biblio.pdf" target="_blank"><button className={`btn btn-default texta `}> Save Bibliography <br/></button></a>
 						</div>
 					</div>
 					<div className="row ">
@@ -92,7 +70,7 @@ class Biblio extends Component {
 							{sourceList &&
 								sourceList.map(item => {
 									if (item.link !== null){
-                		return <li className="plarge" ><span className="bold">{item.creator}</span><em> {item.textTitle}</em> {item.place} {item.year} <br/><ul><li><a href={item.link} target="_blank" className="notBold">catalog link</a></li><li><a href={item.link} target="_blank" className="notBold">internet archive image</a></li></ul><br/></li>
+                		return <li className="plarge" ><span className="bold">{item.creator}</span><em> {item.textTitle}</em> {item.place} {item.year} <br/><ul><li><a href={item.link} target="_blank" className="notBold">Newberry Catalog Link</a></li><li><a href={item.link} target="_blank" className="notBold">Internet Archive Images</a></li></ul><br/></li>
                 	} else {
                 		return <li className="plarge" > <span className="bold">{item.creator}</span><em> {item.textTitle}</em> {item.place} {item.year}<br/></li>
                 	}
@@ -105,36 +83,6 @@ class Biblio extends Component {
 			  </div>
 		  </div>
 		</div>
-		<div className="row" id="printBiblio">
-		<div className="row">
-						<div className="col-md-8 col-md-offset-2">
-						<ul>
-						{bib &&
-							bib.map(entry=> <li className="plarge "><span className="bold">{entry.author}</span>{entry.article}<em>{entry.title}</em>{entry.location}<br/><br/></li>)
-						}
-						</ul>
-						</div>
-					</div>
-
-		<div className="row" >
-						<div className="col-md-8 col-md-offset-2">
-							<h2 className="m20 text-center underline">Primary Sources at the Newberry</h2>
-			        <ul>
-							{sourceList &&
-								sourceList.map(item => {
-									if (item.link !== null){
-                		return <li className="plarge" ><span className="bold">{item.creator}</span><em> {item.textTitle}</em> {item.place} {item.year} <br/><ul><li><a href={item.link} target="_blank" className="notBold">catalog link</a></li><li><a href={item.link} target="_blank" className="notBold">internet archive image</a></li></ul><br/></li>
-                	} else {
-                		return <li className="plarge" > <span className="bold">{item.creator}</span><em> {item.textTitle}</em> {item.place} {item.year}<br/></li>
-                	}
-                })
-							}
-							</ul>
-							<br/>
-						</div>
-					</div>
-		</div>
-
 	</div>
 	        )
 	}

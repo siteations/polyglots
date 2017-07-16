@@ -31,6 +31,7 @@ import IntroExhib from './IntroExhib';
 import IntroPoly from './IntroPoly';
 import Poly from './Poly';
 import Biblio from './Biblio';
+import About from './About.js';
 import {Footer} from './Footer';
 
 const muiTheme = getMuiTheme({
@@ -71,6 +72,7 @@ class App extends Component {
       <IntroPoly info={this.props} />
       <Poly info={this.props} />
       <Biblio info={this.props} />
+      <About />
       <Footer />
       </div>
     </MuiThemeProvider>
