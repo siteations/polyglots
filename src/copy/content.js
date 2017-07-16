@@ -71,7 +71,7 @@ export const textIntros = {
 	antwerp: {
 		tab: 'Antwerp',
 		title: 'Antwerp (1571)',
-		src1: "",
+		src1: "./resampled/wing_zp_5465_p7013_vol_05_sig_a3v_a4r_o2.jpg",
 		subtitle: 'Antwerp, Belgium',
 		subtitle2: 'Christopher Plantin’s royal achievement',
 		p1: 'Six decades after the Complutensian, the Flemish printer and entrepreneur Christopher Plantin resolved to publish another polyglot, both as an act of devotion and as a way to cement his status as the greatest printer of his time...' ,
