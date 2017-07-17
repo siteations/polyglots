@@ -75,7 +75,7 @@ const InstructionContents = (props)=>{
 			        		<p>{instruction.text}</p>
 			        		</div>
 			        		<div className="col-xs-9">
-			        			<img src={instruction.src} style={{width: '95%', borderRadius: '5px'}}/>
+			        			<img src={'https://s3.us-east-2.amazonaws.com/polyglot-images/'+instruction.src.replace('./', '')} style={{width: '95%', borderRadius: '5px'}}/>
 			        		</div>
 			        	</div>
 	        			)

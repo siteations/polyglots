@@ -54,7 +54,7 @@ class InnerSVG extends Component {
         */}
 
           <g>
-          <image width={this.props.w} height={this.props.h} x={0} y={0} xlinkHref={image} />
+          <image width={this.props.w} height={this.props.h} x={0} y={0} xlinkHref={'https://s3.us-east-2.amazonaws.com/polyglot-images/'+image.replace('./','')} />
           <g>
           {dots &&
             dots.map((site, i)=>{ //placeholder until identified in text

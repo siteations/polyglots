@@ -42,7 +42,7 @@ class Introduction extends Component {
 		          <h5>{content.subtitle}</h5>
 		          <h4>{content.subtitle2}</h4>
 		          <span className="center-block">
-		          	<img src={content.src1} style={{ maxWidth: '70%', maxHeight: '200px', margin: '2%' , borderRadius: '5px'}} />
+		          	<img src={'https://s3.us-east-2.amazonaws.com/polyglot-images/'+content.src1.replace('./', '')} style={{ maxWidth: '70%', maxHeight: '200px', margin: '2%' , borderRadius: '5px'}} />
 
 		          </span>
 		          <p className="plarge">{content.p1}</p>

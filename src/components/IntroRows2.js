@@ -11,7 +11,7 @@ export const IntroImg2 = props => {
 			        		image.map((img,i)=>{
 			        			return (
 							        	<div>
-							        	<img src={img} style={{width:'95%', margin: '2%' , borderRadius: '5px'}} />
+							        	<img src={'https://s3.us-east-2.amazonaws.com/polyglot-images/'+img.replace('./','')} style={{width:'95%', margin: '2%' , borderRadius: '5px'}} />
 							        	<p>Text: <em>{title[i]}</em></p><br/><br/>
 							        	</div>
 			        			        )

@@ -38,13 +38,13 @@ class Biblio extends Component {
 
 					<div className="row">
 						<div className="col-md-3 text-center">
-							<a href="./polylgot-text.pdf" target="_blank"><button className={`btn btn-default texta `}> Save Site Content <br/></button></a>
+							<a href='https://s3.us-east-2.amazonaws.com/polyglot-images/polylgot-text.pdf' target="_blank"><button className={`btn btn-default texta `}> Save Site Content <br/></button></a>
 						</div>
 						<div className="col-md-5 text-center">
 							<h2 className="underline">Bibliography for Polyglots</h2>
 						</div>
 						<div className="col-md-3 text-center">
-							<a href="./polylgot-biblio.pdf" target="_blank"><button className={`btn btn-default texta `}> Save Bibliography <br/></button></a>
+							<a href="https://s3.us-east-2.amazonaws.com/polyglot-images/polylgot-biblio.pdf" target="_blank"><button className={`btn btn-default texta `}> Save Bibliography <br/></button></a>
 						</div>
 					</div>
 					<div className="row ">
