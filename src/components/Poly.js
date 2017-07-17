@@ -9,6 +9,8 @@ import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 
 import {ReactSVGPanZoom, TOOL_NONE, TOOL_AUTO, TOOL_PAN, TOOL_ZOOM_IN, TOOL_ZOOM_OUT} from 'react-svg-pan-zoom';
+import InstructionContents from './InstructionContents.js';
+
 
 class Poly extends Component {
 		constructor(props) {
@@ -28,11 +30,14 @@ class Poly extends Component {
 					mag:false,
           zoom: false,
           modal: '40%',
+          instructions: false,
 				};
         this.print=this.print.bind(this);
         this.empty=this.empty.bind(this);
 				this.showInfo=this.showInfo.bind(this);
 				this.hideInfo=this.hideInfo.bind(this);
+        this.showInstruct=this.showInstruct.bind(this);
+        this.hideInstruct=this.hideInstruct.bind(this);
 				this.showInfo2=this.showInfo2.bind(this);
 				this.hideInfo2=this.hideInfo2.bind(this);
 				this.listAdd = this.listAdd.bind(this);
@@ -70,6 +75,15 @@ class Poly extends Component {
   hideInfo(){
   	this.setState({open: false});
   }
+
+  hideInstruct(){
+    this.setState({intructions: false});
+  }
+
+  showInstruct(){
+    this.setState({intructions: true});
+  }
+
 
   print(){
     this.setState({open: false});
@@ -172,6 +186,15 @@ class Poly extends Component {
       />,
     ];
 
+        const actionsInstruct = [
+      <FlatButton
+        label="Close"
+        primary={true}
+        onTouchTap={this.hideInstruct}
+        className = {'appareo'}
+      />,
+    ];
+
 	return (
     <div>
 
@@ -201,8 +224,18 @@ class Poly extends Component {
 							<h2 className="underline">{data.title}</h2>
 						</div>
 						<div className="col-md-4 text-center">
-							<button className={`btn btn-default texta `} onTouchTap="">Interaction Guide (Annotated)</button>
+							<button className={`btn btn-default texta `} onTouchTap={this.showInstruct}>Interaction Guide (Annotated)</button>
 						</div>
+            <Dialog
+                actions={actionInstruct}
+                modal={true}
+                open={this.state.instructions}
+                autoScrollBodyContent={true}
+                contentStyle={{width:`70%`, maxWidth: 'none', marginLeft: `15%` }}
+              >
+                <InstructionContents />
+            </Dialog>
+
 					</div>
 					<div className="text-center center-block" style={{borderRadius: '5px', width:`${this.state.size[0]*.9}` }}>
           {this.state.zoom===true &&
