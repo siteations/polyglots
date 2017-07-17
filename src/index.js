@@ -11,7 +11,7 @@ import './stylesheets/index.css';
 render(
      <Router>
        <div>
-  			<Route exact path="/" component={App} />
+  			<Route path="/" component={App} />
 	     </div>
      </Router>,
     document.getElementById('root'),
