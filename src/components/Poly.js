@@ -77,11 +77,11 @@ class Poly extends Component {
   }
 
   hideInstruct(){
-    this.setState({intructions: false});
+    this.setState({instructions: false});
   }
 
   showInstruct(){
-    this.setState({intructions: true});
+    this.setState({instructions: true});
   }
 
 
@@ -227,7 +227,7 @@ class Poly extends Component {
 							<button className={`btn btn-default texta `} onTouchTap={this.showInstruct}>Interaction Guide (Annotated)</button>
 						</div>
             <Dialog
-                actions={actionInstruct}
+                actions={actionsInstruct}
                 modal={true}
                 open={this.state.instructions}
                 autoScrollBodyContent={true}
