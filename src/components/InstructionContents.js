@@ -40,7 +40,7 @@ const instructions = [
 		{
 		title: 'Preview and Download/Print Bibliography and Website Text (in Acrobat PDF)',
 			tags: ['bibliography pdf', 'website pdf', 'resource copies'],
-			text: "If you prefer to print the full bibliography of \'primary\' and secondary sources or wish to save the website text, please scroll down to the Bibliography pane. On the left of this pane is the button 'Save Site Content'; clicking this will open a pdf of the complete website text (minus bibliography) in a new tab. Save or print as desired. On the right is a button 'Save Bibliography'; clicking this will open a pdf for the complete secondary and primary bibliography, including catalog and internet archive links, in a new tab. Save or print as desired. ",
+			text: "If you prefer to print the full bibliography of primary and secondary sources or wish to save the website text, please scroll down to the Bibliography pane. On the left of this pane is the button 'Save Site Content'; clicking this will open a pdf of the complete website text (minus bibliography) in a new tab. Save or print as desired. On the right is a button 'Save Bibliography'; clicking this will open a pdf for the complete secondary and primary bibliography, including catalog and internet archive links, in a new tab. Save or print as desired. ",
 			src: './instructions/13_bibliobuttons-01.jpg',
 		},
 
