@@ -558,7 +558,7 @@ london: {
 
 	var sourcePoly = ['comp', 'antwerp', 'london'];
 	var types = ['sources', 'translations', 'tools'];
-	var pri = ['creator', 'textTitle', 'place', 'year', 'link'];
+	var pri = ['creator', 'textTitle', 'place', 'year', 'link', 'onlineArchive'];
 	var sec = ['otherAuthor', 'otherTitle', 'otherBib'];
 
 const concatPolys = (obj, sourcePoly, types) => { // strips away volume and type info for simple arra
@@ -579,21 +579,22 @@ export const sourceList = concatPolys(eachPanel, sourcePoly, types); //for id ma
 
 export const fullSourcePrimary = (arr) => { //obj condensed
 	if (arr[pri[0]] !== '' && arr[pri[0]] !== ' '){
-		var text = `${arr[pri[0]]}. ${arr[pri[1]]}. ${arr[pri[2]]}.`;
+		var text = `${arr[pri[0]]} ${arr[pri[1]]} ${arr[pri[2]]}`;
 	} else {
-		var text = `${arr[pri[1]]}. ${arr[pri[2]]}.`;
+		var text = `${arr[pri[1]]} ${arr[pri[2]]}`;
 	};
-	let link = null;
+	let link = null, onlineArchive = null;
 	if (arr[pri[4]] !== '' && arr[pri[4]] !== ' '){
 		link = arr[pri[4]];
+		onlineArchive = arr[pri[5]];
 	}
 
-	return {text, link};
+	return {text, link, onlineArchive };
 }
 
 export const fullSourceSecondary = (arr)=>{ //obj condensed
 	if (arr[sec[1]][0] !== '' && arr[sec[1]][0] !== ' '){
-	var text = `${arr[sec[0]][0]}. ${arr[sec[1]][0]}. ${arr[sec[2]][0]}.`;
+	var text = `${arr[sec[0]][0]} ${arr[sec[1]][0]} ${arr[sec[2]][0]}`;
 	return {text};
 	}
 	return {text:null};

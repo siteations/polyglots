@@ -202,7 +202,20 @@ class Poly extends Component {
           <h3 className="m20">The Great Polyglot: Texts of Interest</h3>
                 <ul>
                 {this.state.list &&
-                  this.state.list.map(item => <li className="black m10" > {item.text} <a href={item.link} target="blank"><em>catalog link: </em> {item.link} </a></li>)
+                  this.state.list.map(item => {
+                    return (
+                     <li className="black m10" > {item.text}
+                     <ul>
+                     {item.link &&
+                      <li><a href={item.link} target="blank">{item.link} </a></li>
+                     }
+                     {item.onlineArchive &&
+                      <li><a href={item.onlineArchive} target="blank">{item.onlineArchive}</a></li>
+                     }
+                     </ul>
+                     </li>
+                      )
+                  })
                 }
                 {this.state.list.length<1 &&
                   <li>select panel text to get started</li>
