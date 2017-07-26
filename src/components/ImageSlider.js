@@ -23,12 +23,12 @@ class ImageSlider extends Component {
 
 	render() {
 
-		//'https://www.siteations.com/testing/polyglot/'+this.props.images[this.state.active].replace('./resampled','medium')
+		//'https://www.siteations.com/testing/polyglot/'+this.props.images[this.state.active].replace('./','')
 
 	return (
 		<div>
 			<div className="text-center">
-				<a href={this.props.images[this.state.active]} target='_blank'> <img src={this.props.images[this.state.active].replace('./resampled','./thumbnail')} style={{maxWidth: '100%', maxHeight: '350px', margin: '2%' , borderRadius: '5px', cursor: 'zoom-in'}}  /> </a>
+				<a href={'https://www.siteations.com/testing/polyglot/'+this.props.images[this.state.active].replace('./','')} target='_blank'> <img src={this.props.images[this.state.active].replace('./resampled','./thumbnail')} style={{maxWidth: '100%', maxHeight: '350px', margin: '2%' , borderRadius: '5px', cursor: 'zoom-in'}}  /> </a>
         <p className="small"><em>click to open/enlarge in a new window</em></p>
 			</div>
 			<div className="row m10">
