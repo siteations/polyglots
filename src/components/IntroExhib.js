@@ -41,8 +41,8 @@ class IntroExhib extends Component {
 				<div className="page bshadowed layer1" >
 					<div className="jumbotron">
 			      <div className="text-center">
-			        <h1 className="white pjheader ">Cathedrals of Print</h1>
-			        <h3 className="white ">Exploring the Great Polyglots, 1502-1657</h3><br/>
+			        <h1 className="white pjheader ">Polyglots</h1>
+			        <h3 className="white ">The Bible in Multiple Tongues, 1502-1657</h3><br/>
 			        <p className="white ">Discover the sources, innovations, and uses of these monuments<br/> to early modern devotion, scholarship, and technical skill.</p>
 			      </div>
 			    </div>
