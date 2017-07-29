@@ -23,7 +23,15 @@ const PanelContents = props => {
 			     	<h3>{element.subtitle}</h3>
 			     	<ImageSlider images={element.src} />
 			     	<h5 className="black" >{element.creator} <em>{element.textTitle}</em> {element.place} {element.year} </h5>
-			     	<p>{element.narrative}</p><br/>
+			     	<p>{element.narrative &&
+			     		element.narrative.split('/').map((item,i)=>{
+			     			if (i%2===0){
+			     				return <span>{item}</span>
+			     			} else {
+			     				return <span><em>{item}</em></span>
+			     			}
+			     		})
+			     	}</p><br/>
 			     	<p className="black" >other sources:</p>
 			     	<ul>
 			     		{element.otherTitle &&

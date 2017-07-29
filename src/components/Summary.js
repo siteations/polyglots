@@ -7,6 +7,7 @@ const Summary = props => {
 	let show = props.show;
 	let open = props.open;
 	let close = props.close;
+	let color = props.color;
 
 	const actions = [
       <FlatButton
@@ -21,7 +22,7 @@ const Summary = props => {
 	return (
 	        <div className="col-md-4">
 	        	<div className="bshadowedlite layerwhite fullheight">
-		          <h2 className="underline">{content.title}</h2>
+		          <h2 className="underline">{content.title} <span className={`fa fa-circle ${color} fa-sm`}> </span></h2>
 		          <span>
 		          	<img className="thumb25" src={content.src1} />
 		          	<img className="thumb25" src={content.src2} />
@@ -29,6 +30,7 @@ const Summary = props => {
 		          	<img className="thumb25" src={content.src4} />
 		          </span>
 		          <p className="plarge">{content.body}</p>
+		          <p className={`plarge ${color}`}>On the <a href="#spreads"><span className={color} >Polyglot spreads below</span></a>, {`areas outlined in ${color} or with a ${color} dot show polyglot ${content.title.toLowerCase()}.`}</p>
 
 		          <br/>
 							<Dialog

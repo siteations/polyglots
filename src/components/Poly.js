@@ -31,6 +31,7 @@ class Poly extends Component {
           zoom: false,
           modal: '40%',
           instructions: false,
+          hash: this.props.info.location.hash,
 				};
         this.print=this.print.bind(this);
         this.empty=this.empty.bind(this);
@@ -44,6 +45,7 @@ class Poly extends Component {
 				this.toggleAll = this.toggleAll.bind(this);
 				this.toggleLayer=this.toggleLayer.bind(this);
         this.magToggle = this.magToggle.bind(this);
+        this.pushHash=this.pushHash.bind(this);
 		}
 
   componentDidMount() {
@@ -153,13 +155,41 @@ class Poly extends Component {
   	console.log(this.state.list, arr2);
   }
 
+  pushHash(e){
+    let hash=e.target.value;
+    this.props.info.history.push(hash);
+
+  }
+
   render() {
 
   	var hash = this.props.info.location.hash;
-  	if (hash !== '#inter-Comp' && hash !== '#inter-Antwerp' && hash !== '#inter-London' ){hash='#inter-Comp'};
-  	var id=hash.replace('#','');
-  	var key = id.split('-')[1];
-  	var data = {}, panel ={}, overlays = [], details = [];
+
+    var options = {
+      '#inter-Comp':'comp',
+      '#inter-Antwerp': 'antwerp',
+      '#inter-London': 'london',
+    }
+
+    let exAntwerp = window.document.getElementById('inter-Antwerp');
+    let exComp = window.document.getElementById('inter-Comp');
+    let exLondon = window.document.getElementById('inter-London');
+    let otherHashes = (hash !== '#inter-Comp' && hash !== '#inter-Antwerp' && hash !== '#inter-London' );
+    console.log('series sampled', exAntwerp, exComp, exLondon, otherHashes);
+
+  	if (otherHashes && ( !exAntwerp && !exComp && !exLondon)){
+      hash='#inter-Comp'
+    } else if (otherHashes && exComp){
+      hash='#inter-Comp'
+    } else if (otherHashes && exAntwerp){
+      hash='#inter-Antwerp'
+    } else if (otherHashes && exLondon){
+      hash='#inter-London'
+    };
+    var id = hash.replace('#', '');
+  	var key = options[hash];
+
+  	var data = {}, panel = {}, overlays = [], details = [];
 
   	if (key){
   		data = imagePanels[key.toLowerCase()]; //image underlays/points for svg.
@@ -196,7 +226,8 @@ class Poly extends Component {
     ];
 
 	return (
-    <div>
+    <div id="spreads">
+
 
     <div className="row visible-print-block" id="printList">
           <h3 className="m20">The Great Polyglot: Texts of Interest</h3>
@@ -229,6 +260,13 @@ class Poly extends Component {
 	   </div>
 	   <div className="col-xs-10" id={id} ref="sizeP" >
 				<div className="page bshadowed m20 layer1" id='size' >
+            <div className="row hidden-print text-center" style={{marginBottom:'20px'}}>
+              <h2 className="underline">Compare Polyglot Editions</h2>
+              <button className="btn btn-default texta m10s" onTouchTap={this.pushHash} value="#inter-Comp">Complutensian (1517)</button>
+              <button className="btn btn-default texta m10s" onTouchTap={this.pushHash} value="#inter-Antwerp">Antwerp (1571)</button>
+              <button className="btn btn-default texta m10s" onTouchTap={this.pushHash} value="#inter-London">London (1657)</button>
+            </div>
+
 					<div className="row">
 						<div className="col-md-4 text-center">
 							<button className={`btn btn-default texta `} onTouchTap={this.magToggle}>Pan & Magnify View</button>

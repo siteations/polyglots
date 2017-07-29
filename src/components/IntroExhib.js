@@ -65,9 +65,9 @@ class IntroExhib extends Component {
 			    </div>
 			    <br/>
 			    <div className="row">
-			    	<Summary content={summaries.sources} />
-			    	<Summary content={summaries.translations} />
-			    	<Summary content={summaries.tools} />
+			    	<Summary content={summaries.sources} color="red" />
+			    	<Summary content={summaries.translations} color="blue" />
+			    	<Summary content={summaries.tools} color="yellow" />
 			     </div>
 					  <div className="row center-block text-center m20 hidden-print">
 					  	<span className="glyphicon glyphicon-chevron-down down" onTouchTap={this.jumpToHash}></span>
