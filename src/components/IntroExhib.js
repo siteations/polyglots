@@ -46,6 +46,9 @@ class IntroExhib extends Component {
 			        <p className="white ">Discover the sources, innovations, and uses of these monuments<br/> to early modern devotion, scholarship, and technical skill.</p>
 			      </div>
 			    </div>
+			    <div className="row hidden-md hidden-lg text-center">
+			    	<p>This application has been optimized for viewing on larger tablets, laptops, and desktops. Smaller, mobile devices offer compressed, smaller images that are not ideal for examining manuscript details.</p>
+			    </div>
 			    <div className="row">
 			        <div className="col-md-8 col-md-offset-2">
 			        {introParagraph &&

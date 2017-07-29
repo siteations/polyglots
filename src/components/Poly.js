@@ -186,6 +186,7 @@ class Poly extends Component {
     } else if (otherHashes && exLondon){
       hash='#inter-London'
     };
+
     var id = hash.replace('#', '');
   	var key = options[hash];
 
@@ -269,13 +270,13 @@ class Poly extends Component {
 
 					<div className="row">
 						<div className="col-md-4 text-center">
-							<button className={`btn btn-default texta `} onTouchTap={this.magToggle}>Pan & Magnify View</button>
+              <button className={`btn btn-default texta `} onTouchTap={this.showInstruct}>Select Texts (to print)</button>
 						</div>
 						<div className="col-md-4 text-center">
 							<h2 className="underline">{data.title}</h2>
 						</div>
 						<div className="col-md-4 text-center">
-							<button className={`btn btn-default texta `} onTouchTap={this.showInstruct}>Interaction Guide (Annotated)</button>
+							<button className={`btn btn-default texta `} onTouchTap={this.magToggle}>Pan & Magnify View</button>
 						</div>
             <Dialog
                 actions={actionsInstruct}

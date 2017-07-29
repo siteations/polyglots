@@ -56,8 +56,23 @@ const instructions = [
 const InstructionContents = (props)=>{
 	return (
 	        <div>
-	        	<h3 className="black">Guide for Navigation</h3>
-	        	<p>The following entries - describing a desired action and where, in visual annotation, it can be found on the interface - are designed to aide in ease of use.<br/>Each entry is tagged with key words so that users at home can search easily. <br/>Use <em>control + 'f' </em>(pc) or <em>command + 'f' </em>(mac) and type in the action you wish to perform.</p>
+	        	<h3 className="black">Collect Personalize List of Texts to Print</h3>
+	        	<p>Visitors can download and save the full Polyglot bibliography from the final website section.<br/>To save a personalize a list of research texts  - for later exploration - follow the steps below.<br/><em> These options will only be available during laptop and desktop viewing, outside the gallery.</em></p>
+	        	<div className="row">
+		        	<div className="col-xs-4">
+			        	<ul>
+				        	<li> Click on the polglot spread to show a resource, tool, or translation and scroll to the bottom of that descriptive panel. </li><br/>
+				        	<li> By clicking the final button, you add both the secondary and primary texts to an evolving list that can be accessed to the left. </li><br/>
+				        	<li> After added desired texts (from multiple resources), click on 'show list' to preview and print their bibliographic selections. Click 'clear list' to remove elements and start a new collection.</li>
+			        	</ul>
+		        	</div>
+		        	<div className="col-xs-8">
+		        	<img src="" style={{width: '95%', borderRadius: '5px'}}/>
+		        	<img src="" style={{width: '95%', borderRadius: '5px'}}/>
+		        	</div>
+
+		        </div>
+
 
 	        	{instructions &&
 	        		instructions.map(instruction=>{
