@@ -63,18 +63,18 @@ const InstructionContents = (props)=>{
 			        	<ul>
 				        	<li> Click on the polglot spread to show a resource, tool, or translation and scroll to the bottom of that descriptive panel. </li><br/>
 				        	<li> By clicking the final button, you add both the secondary and primary texts to an evolving list that can be accessed to the left. </li><br/>
-				        	<li> After added desired texts (from multiple resources), click on 'show list' to preview and print their bibliographic selections. Click 'clear list' to remove elements and start a new collection.</li>
+				        	<li> After adding desired texts (from multiple resources), click on 'show list' (1) to preview and print (2) their bibliographic selections. Click 'clear list' (3) to remove elements and start a new collection.</li>
 			        	</ul>
 		        	</div>
 		        	<div className="col-xs-8">
-		        	<img src="" style={{width: '95%', borderRadius: '5px'}}/>
-		        	<img src="" style={{width: '95%', borderRadius: '5px'}}/>
+		        	<img src="./instructions/01_addToList-01.jpg" style={{width: '95%', borderRadius: '5px', marginBottom: '10px'}}/>
+		        	<img src="./instructions/02_ListPreview-01.jpg" style={{width: '95%', borderRadius: '5px'}}/>
 		        	</div>
 
 		        </div>
 
 
-	        	{instructions &&
+	        	{/*instructions &&
 	        		instructions.map(instruction=>{
 	        			return (
 			        	<div className="row m20">
@@ -95,7 +95,7 @@ const InstructionContents = (props)=>{
 			        	</div>
 	        			)
 	        		})
-	        	}
+	        	*/}
 
 	        </div>
 	        )

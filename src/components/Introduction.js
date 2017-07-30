@@ -48,11 +48,13 @@ class Introduction extends Component {
 		          <p className="plarge">{content.p1}</p>
 		          <button className={`btn btn-default texta `} href="" role="button" onTouchTap={this.handleOpen}>Learn more »</button>
 		          <br/>
-		          <div className="center-block text-center" style={{marginTop: '20px'}}>
-					  	<a href={`#inter-${content.tab}`} style={{fontFamily: 'appareo'}}>load {content.title}</a>
+		          <div className="overline" style={{position:'absolute', bottom: '10px', left: '50%', transform: 'translateX(-50%)'}}>
+		          <div className="center-block text-center" style={{marginTop: '10px'}}>
+					  	<a href={`#inter-${content.tab}`} style={{fontFamily: 'appareo'}}>{content.title}</a>
 					  	</div>
 		          <div className="center-block text-center">
 					  	<span className="glyphicon glyphicon-chevron-down down" onTouchTap={e=>this.props.action(`#inter-${content.tab}`)}></span>
+					  	</div>
 					  	</div>
 
 		          <Dialog

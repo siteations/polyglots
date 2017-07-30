@@ -186,6 +186,12 @@ a:visited {
 	border-bottom: 2px dotted #BF360C;
 }
 
+.overline {
+	/*text-decoration: underline;
+	text-decoration-color: #BF360C;*/
+	border-top: 2px dotted #BF360C;
+}
+
 .layer1 {
 	background-color: #f4f2ec;
 }
@@ -225,7 +231,7 @@ a:visited {
 }
 
 .fullheight2 {
-	min-height: 570px;
+	min-height: 600px;
 }
 
 .navbarG {

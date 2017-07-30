@@ -89,10 +89,8 @@ class Poly extends Component {
 
   print(){
     this.setState({open: false});
-    document.getElementById('printBiblio').attributes[0].value = "row hidden";
-    document.getElementById('printPoly').attributes[0].value = "row hidden-print";
-    document.getElementById('printIntro').attributes[0].value = "row hidden-print";
-    document.getElementById('printList').attributes[0].value = "row visible-print-block";
+    // console.log(document.getElementById('printList').attributes);
+    // document.getElementById('printList').attributes[0].value = "row visible-print-block";
     window.print();
   }
 
@@ -239,10 +237,10 @@ class Poly extends Component {
                      <li className="black m10" > {item.text}
                      <ul>
                      {item.link &&
-                      <li><a href={item.link} target="blank">{item.link} </a></li>
+                      <li><a href={item.link} target="blank">Newberry Catalog Link</a></li>
                      }
                      {item.onlineArchive &&
-                      <li><a href={item.onlineArchive} target="blank">{item.onlineArchive}</a></li>
+                      <li><a href={item.onlineArchive} target="blank">CARLI digital collections</a></li>
                      }
                      </ul>
                      </li>

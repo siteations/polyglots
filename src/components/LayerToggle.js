@@ -41,7 +41,7 @@ export const LayerListCol = (props) => {
 			          className = "hidden-print"
 			        >
 			        <div className="">
-				        <h3 className="m20">The Great Polyglot: Texts of Interest</h3>
+				        <h3 className="m20">The Great Polyglots: Texts of Interest</h3>
 				        <ul>
 								{list &&
 									list.map(item => {
@@ -49,10 +49,10 @@ export const LayerListCol = (props) => {
 									   <li className="black m10" > {item.text}
 									   <ul>
 									   {item.link &&
-									   	<li><a href={item.link} target="blank">{item.link} </a></li>
+									   	<li><a href={item.link} target="blank">Newberry Catalog Link</a></li>
 									   }
 									   {item.onlineArchive &&
-									   	<li><a href={item.onlineArchive} target="blank">{item.onlineArchive}</a></li>
+									   	<li><a href={item.onlineArchive} target="blank">CARLI digital collections</a></li>
 									   }
 									   </ul>
 									   </li>

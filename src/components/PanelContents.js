@@ -21,7 +21,7 @@ const PanelContents = props => {
 			     	<h1 className="black">{element.title}</h1><br/>
 			     	<Divider inset={false} />
 			     	<h3>{element.subtitle}</h3>
-			     	<ImageSlider images={element.src} />
+			     	<ImageSlider images={element.src} link={element.onlineArchive}/>
 			     	<h5 className="black" >{element.creator} <em>{element.textTitle}</em> {element.place} {element.year} </h5>
 			     	<p>{element.narrative &&
 			     		element.narrative.split('/').map((item,i)=>{
@@ -40,7 +40,9 @@ const PanelContents = props => {
 			     	</ul>
 
 			     	<Divider inset={false} />
-			     	<h5 className="red"><a href={element.link} className="red" target="_blank" >Find at the Newberry (new page)</a></h5>
+			     	<h5 className="red"><a href={element.link} className="red" target="_blank" >Find at the Newberry</a></h5>
+			     	<h5 className="red"><a href={element.onlineArchive} className="red" target="_blank" >Examine and Download at CARLI digital collections</a></h5><br/>
+
 			     	<button className="btn btn-default texta hidden-md hidden-sm hidden-xs" value={element.id} onTouchTap={e=>action(e)} >Add Primary & Secondary Source to List (to print)</button>
 	     	</div>
 	    </div>
