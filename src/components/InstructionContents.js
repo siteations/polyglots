@@ -61,9 +61,9 @@ const InstructionContents = (props)=>{
 	        	<div className="row">
 		        	<div className="col-xs-4">
 			        	<ul>
-				        	<li> Click on the polglot spread to show a resource, tool, or translation and scroll to the bottom of that descriptive panel. </li><br/>
+				        	<li> Click on the polyglot spread to show a resource, tool, or translation and scroll to the bottom of that descriptive panel. </li><br/>
 				        	<li> By clicking the final button, you add both the secondary and primary texts to an evolving list that can be accessed to the left. </li><br/>
-				        	<li> After adding desired texts (from multiple resources), click on 'show list' (1) to preview and print (2) their bibliographic selections. Click 'clear list' (3) to remove elements and start a new collection.</li>
+				        	<li> After adding desired texts (from multiple resources), click on 'show list' (1) to preview and print (2) bibliographic selections. Click 'clear list' (3) to remove elements and start a new collection.</li>
 			        	</ul>
 		        	</div>
 		        	<div className="col-xs-8">
