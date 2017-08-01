@@ -383,7 +383,7 @@ sources: [
 				category: 'tools',
 				title: 'Arabic Studies',
 				orig: 0,
-				pos: '55%',
+				pos: '5%',
 				x: 2535.9,
 				y: 1912.1,
 				rect: {x:1569.6, y:889.8, width: 1108.3, height: 1022.3, stroke: 'toolsStroke', xr:5 }
@@ -394,7 +394,7 @@ sources: [
 				category: 'tools',
 				title: 'Preaching from the Polyglot',
 				orig: 0,
-				pos: '55%',
+				pos: '5%',
 				x: 2123.8,
 				y: 67.3,
 				rect: {x:1569.6, y:67.3, width: 1108.3, height: 822.5, stroke: 'toolsStroke', xr:5 }
@@ -403,9 +403,9 @@ sources: [
 				id: 'lto5',
 				type: 'Arabic Translation',
 				category: 'tools',
-				title: 'Conversion and Education',
+				title: 'Bibles Make Bibles',
 				orig: 0,
-				pos: '55%',
+				pos: '5%',
 				x: 1990.4,
 				y: 1841,
 				rect: { x:1569.6, y:889.8, width: 841.6, height: 951.2, stroke: 'toolsStroke', xr:5 }
